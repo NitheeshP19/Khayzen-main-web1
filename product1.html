@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Axial Motor - Khayzen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:300,400,700%7CPoppins:300,400,500,700,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+      .slider-container {
+        position: relative;
+        max-width: 700px;
+        margin: 40px auto;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+      .slider {
+        display: flex;
+        transition: transform 0.8s ease-in-out;
+      }
+      .slide {
+        min-width: 100%;
+        height: 350px;
+      }
+      .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .motor-title {
+        background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        margin-bottom: 0;
+      }
+      .motor-description {
+        background: #f8f9fa;
+        padding: 60px 0;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555;
+      }
+      .diagram-section {
+        padding: 80px 0;
+        background: white;
+      }
+      .diagram-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+      }
+      .diagram-card:hover {
+        transform: translateY(-10px);
+      }
+      .diagram-card h3 {
+        color: #007bff;
+        margin-bottom: 25px;
+        font-weight: 700;
+      }
+      .diagram-card img {
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+        max-height: 300px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+      }
+      .diagram-card:hover img {
+        transform: scale(1.05);
+      }
+      .advantages-section {
+        background: linear-gradient(135deg, #e8d5ff 0%, #b3e5fc 100%);
+        padding: 80px 0;
+      }
+      .advantages-list {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .advantage-card {
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease;
+      }
+      .advantage-card:hover {
+        transform: translateY(-5px);
+      }
+      .advantage-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #f0f8ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        font-size: 24px;
+        color: #2C2FB8;
+      }
+      .advantage-content h4 {
+        color: #2C2FB8;
+        font-weight: bold;
+        margin: 0 0 8px 0;
+        font-size: 18px;
+      }
+      .advantage-content p {
+        color: #666;
+        margin: 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container">
+          <div class="cssload-speeding-wheel"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <div class="page">
+      <header class="section page-header">
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <div class="rd-navbar-panel">
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <div class="rd-navbar-brand">
+                    <a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/><img class="brand-logo-light" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html" style="font-size: 20px;">Home</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="aboutus.html" style="font-size: 20px;">About</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="typography.html" style="font-size: 20px;">Products</a></li>
+                      <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
+                        <button class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu" style="font-size: 20px;">Technology</button>
+                        <ul id="tech-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
+                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="advantages.html">Advantages</a></li>
+                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="applications.html">Applications</a></li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html" style="font-size: 20px;">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="motor-title">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h1 class="display-3 font-weight-bold wow fadeInUp">Axial Motor</h1>
+              <p class="lead mt-3 wow fadeInUp" data-wow-delay=".2s">High-Performance Industrial Motor Technology</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Auto Sliding Images -->
+      <section class="section bg-default">
+        <div class="container">
+          <div class="slider-container wow fadeInUp">
+            <div class="slider" id="motorSlider">
+              <div class="slide">
+                <img src="images/axial motor slide 1.jpg" alt="Axial Motor Image 1">
+              </div>
+              <div class="slide">
+                <img src="images/axial motor slide 2.jpg" alt="Axial Motor Image 2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Description Section -->
+      <section class="motor-description">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <p class="text-center wow fadeInUp">
+                This motor is a brushless, permanent magnet synchronous motor with a multi-layered printed circuit board embedded with copper-etched conductors in a stator, that works in conjunction with permanent magnets in the rotor with Axial Flux and Air gap.
+                The state-of-the-art motor technology is patented. High-tech edge computing makes use of printed circuit board manufacturing to print stators for coreless axial flux machines. This approach fundamentally changes how motors are designed and manufacturedrial applications. Designed with precision engineering and advanced materials, these motors provide reliable performance with minimal maintenance requirements. The compact design makes them ideal for space-constrained applications while maintaining exceptional power output.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison Table Section -->
+      <section class="diagram-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 mb-5 wow fadeInUp">
+              <div class="diagram-card">
+                <h3 class="text-center">Comparison Table</h3>
+                <img src="images/comparison.jpg" alt="Comparison Table" style="width: 100%; height: 500px; object-fit: contain; border-radius: 10px; display: block; margin: 0 auto; cursor: pointer;" onclick="window.open(this.src, '_blank')">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Advantages Section -->
+      <section class="advantages-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <h2 class="text-center mb-5 wow fadeInUp" style="color: #2C2FB8; font-weight: 700;">Advantages</h2>
+              <div class="advantages-list">
+                <div class="advantage-card wow fadeInUp" data-wow-delay=".1s">
+                  <div class="advantage-icon">⇄</div>
+                  <div class="advantage-content">
+                    <h4>Smaller Footprint</h4>
+                    <p>Smaller footprint than existing motor technology</p>
+                  </div>
+                </div>
+                <div class="advantage-card wow fadeInUp" data-wow-delay=".2s">
+                  <div class="advantage-icon">🔇</div>
+                  <div class="advantage-content">
+                    <h4>Reduced Noise</h4>
+                    <p>Reduced noise due to elimination of winding structure</p>
+                  </div>
+                </div>
+                <div class="advantage-card wow fadeInUp" data-wow-delay=".3s">
+                  <div class="advantage-icon">⚙</div>
+                  <div class="advantage-content">
+                    <h4>Simplified Manufacturing</h4>
+                    <p>Eliminates need for iron lamination and wire winding</p>
+                  </div>
+                </div>
+                <div class="advantage-card wow fadeInUp" data-wow-delay=".4s">
+                  <div class="advantage-icon">⊘</div>
+                  <div class="advantage-content">
+                    <h4>No Cogging</h4>
+                    <p>No steel in stator eliminates cogging (vibration)</p>
+                  </div>
+                </div>
+                <div class="advantage-card wow fadeInUp" data-wow-delay=".5s">
+                  <div class="advantage-icon">⚖</div>
+                  <div class="advantage-content">
+                    <h4>Lightweight Design</h4>
+                    <p>Motors weigh 70% less and need 80% less raw materials</p>
+                  </div>
+                </div>
+                <div class="advantage-card wow fadeInUp" data-wow-delay=".6s">
+                  <div class="advantage-icon">⚡</div>
+                  <div class="advantage-content">
+                    <h4>High Torque</h4>
+                    <p>Produces more torque with less than half the mass</p>
+                  </div>
+                </div>
+                <div class="advantage-card wow fadeInUp" data-wow-delay=".7s">
+                  <div class="advantage-icon">⚡</div>
+                  <div class="advantage-content">
+                    <h4>Energy Efficient</h4>
+                    <p>Energy efficiency between 87% to 90%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Back to Products -->
+      <section class="section" style="background: white; padding: 40px 0;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <a href="typography.html" class="button button-primary button-lg wow fadeInUp">Back to Products</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const slider = document.getElementById('motorSlider');
+
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          if (slider) {
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+          }
+        }
+
+        if (slides.length > 0) {
+          setInterval(nextSlide, 4000);
+        }
+      });
+    </script>
+  </body>
+</html>

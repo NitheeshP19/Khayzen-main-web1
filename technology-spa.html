@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology - Single Page App</title>
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:300,400,700%7CPoppins:300,400,500,700,900">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #1e3a8a;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    header p {
+      color: #6b7280;
+      font-size: 1.1rem;
+    }
+
+    /* Dropdown Menu */
+    .dropdown-wrapper {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .dropdown-btn {
+      background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+      color: white;
+      padding: 15px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    }
+
+    .dropdown-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background: white;
+      min-width: 250px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      z-index: 1000;
+      margin-top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .dropdown-menu.active {
+      display: block;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateX(-50%) translateY(-5px); }
+      to { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+
+    .dropdown-menu a {
+      color: #333;
+      padding: 15px 20px;
+      text-decoration: none;
+      display: block;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+
+    .dropdown-menu a:hover {
+      background: #f0f4ff;
+      color: #007bff;
+      border-left-color: #007bff;
+      padding-left: 25px;
+    }
+
+    .dropdown-menu a:first-child {
+      border-radius: 10px 10px 0 0;
+    }
+
+    .dropdown-menu a:last-child {
+      border-radius: 0 0 10px 10px;
+    }
+
+    /* Content Sections */
+    .content-section {
+      display: none;
+      background: white;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-section.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .section-title {
+      color: #1e3a8a;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      border-radius: 2px;
+    }
+
+    .section-content {
+      color: #334155;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .feature-item {
+      background: linear-gradient(135deg, #f0f4ff 0%, #e8f0ff 100%);
+      padding: 25px;
+      border-radius: 12px;
+      border-left: 4px solid #007bff;
+      transition: all 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 123, 255, 0.2);
+    }
+
+    .feature-item h3 {
+      color: #007bff;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .feature-item p {
+      color: #6b7280;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .content-section {
+        padding: 30px;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dropdown-menu {
+        min-width: 200px;
+      }
+
+      .dropdown-btn {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Technology Platform</h1>
+      <p>Explore our innovative solutions and advanced features</p>
+    </header>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-wrapper">
+      <button class="dropdown-btn" onclick="toggleDropdown()">Choose Section ▼</button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#" onclick="showSection('home'); return false;">Home</a>
+        <a href="#" onclick="showSection('advantages'); return false;">Advantages</a>
+        <a href="#" onclick="showSection('applications'); return false;">Applications</a>
+      </div>
+    </div>
+
+    <!-- Home Section -->
+    <div id="home" class="content-section active">
+      <h2 class="section-title">Welcome to Our Technology</h2>
+      <p class="section-content">
+        Discover cutting-edge innovation designed to transform industries. Our technology platform combines advanced engineering with sustainable practices to deliver solutions that matter.
+      </p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>🚀 Innovation</h3>
+          <p>Pioneering technology that sets new industry standards and drives progress forward.</p>
+        </div>
+        <div class="feature-item">
+          <h3>⚡ Performance</h3>
+          <p>High-efficiency systems delivering superior results with minimal resource consumption.</p>
+        </div>
+        <div class="feature-item">
+          <h3>🌍 Sustainability</h3>
+          <p>Eco-friendly solutions committed to environmental responsibility and green practices.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advantages Section -->
+    <div id="advantages" class="content-section">
+      <h2 class="section-title">Our Advantages</h2>
+      <p class="section-content">
+        Our technology offers numerous competitive advantages that set us apart from traditional solutions. We focus on delivering exceptional value through innovation, quality, and sustainability.
+      </p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>💡 High Efficiency</h3>
+          <p>87-90% energy efficiency with advanced PCB stator technology and optimized design.</p>
+        </div>
+        <div class="feature-item">
+          <h3>🔇 Low Noise</h3>
+          <p>Reduced noise levels due to elimination of traditional winding structures and cogging.</p>
+        </div>
+        <div class="feature-item">
+          <h3>⚙️ Simplified Manufacturing</h3>
+          <p>Eliminates need for iron lamination and wire winding, reducing production complexity.</p>
+        </div>
+        <div class="feature-item">
+          <h3>🪶 Lightweight Design</h3>
+          <p>Motors weigh 70% less and require 80% less raw materials than conventional designs.</p>
+        </div>
+        <div class="feature-item">
+          <h3>💪 High Torque</h3>
+          <p>Produces more torque with less than half the mass of traditional motors.</p>
+        </div>
+        <div class="feature-item">
+          <h3>✅ No Cogging</h3>
+          <p>Eliminates vibration through advanced stator design without steel components.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Applications Section -->
+    <div id="applications" class="content-section">
+      <h2 class="section-title">Technology Applications</h2>
+      <p class="section-content">
+        Our innovative solutions find applications across diverse industries. From automotive to healthcare, aerospace to manufacturing, our technology delivers reliable performance in demanding environments.
+      </p>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>🚗 Automotive</h3>
+          <p>Electric vehicles, hybrid systems, and automotive automation with superior efficiency.</p>
+        </div>
+        <div class="feature-item">
+          <h3>🏥 Healthcare</h3>
+          <p>Precision motor control for medical devices, surgical equipment, and patient care systems.</p>
+        </div>
+        <div class="feature-item">
+          <h3>🏭 Industrial Automation</h3>
+          <p>Manufacturing processes, conveyor systems, and automated machinery with enhanced performance.</p>
+        </div>
+        <div class="feature-item">
+          <h3>✈️ Aerospace</h3>
+          <p>Mission-critical motor systems for aerospace applications with uncompromising reliability.</p>
+        </div>
+        <div class="feature-item">
+          <h3>🤖 Robotics</h3>
+          <p>Advanced motion control for robotic systems requiring precision and efficiency.</p>
+        </div>
+        <div class="feature-item">
+          <h3>⚡ Energy Systems</h3>
+          <p>Renewable energy applications and power generation systems with optimal performance.</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById('dropdownMenu');
+      menu.classList.toggle('active');
+    }
+
+    function showSection(sectionId) {
+      document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+      document.getElementById('dropdownMenu').classList.remove('active');
+    }
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('dropdownMenu');
+      const btn = document.querySelector('.dropdown-btn');
+      
+      if (!dropdown.contains(event.target) && !btn.contains(event.target)) {
+        dropdown.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

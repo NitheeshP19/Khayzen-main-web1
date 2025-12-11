@@ -1,0 +1,76 @@
+﻿
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark">
+              <div class="rd-navbar-aside" style="display: flex; align-items: center; justify-content: space-between; padding: 18px 30px; max-width: 1400px; margin: 0 auto; width: 100%;">
+                <div style="display: flex; align-items: center;">
+                  <a class="brand-aside" href="index.html" style="display: flex; align-items: center; gap: 12px;"><img src="favicon.ico" alt="Khayzen Systems" style="width: 45px; height: 45px;"/><span style="color: #007bff; font-weight: 800; font-size: clamp(16px, 2.5vw, 28px); letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,123,255,0.3); white-space: nowrap;">KHAYZEN SYSTEMS PVT LTD</span></a>
+                </div>
+                <div style="display: flex; align-items: center; gap: 25px;">
+                  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 20px; border: 1px solid #38bdf8;">
+                    <span class="fa-phone" style="color: #ffffff; font-size: 14px;"></span>
+                    <a href="tel:+917217471790" style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 13px;">+91 7217471790</a>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 20px; border: 1px solid #38bdf8;">
+                    <span class="fa-envelope" style="color: #ffffff; font-size: 14px;"></span>
+                    <a href="mailto:Khayzen@gmail.com" style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 13px;">Khayzen@gmail.com</a>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 20px; border: 1px solid #38bdf8;">
+                    <span class="fa-map-marker" style="color: #ffffff; font-size: 14px;"></span>
+                    <span style="color: #ffffff; font-weight: 600; font-size: 13px;">Coimbatore, Tamil Nadu</span>
+                  </div>
+                  <ul class="social-links" style="display: flex; gap: 10px; margin: 0; align-items: center;">
+                    <li><a class="fa-linkedin" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                    <li><a class="fa-twitter" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                    <li><a class="fa-facebook" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                    <li><a class="fa-instagram" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer">
+              <div class="rd-navbar-main">
+                <!--RD Navbar Panel-->
+                <div class="rd-navbar-panel">
+                  <!--RD Navbar Toggle-->
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <!--RD Navbar Brand-->
+                  <div class="rd-navbar-brand">
+                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/><img class="brand-logo-light" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/></a>
+                  </div>
+                </div>
+                <div class="rd-navbar-main-element">
+                  <div class="rd-navbar-nav-wrap">
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html" style="font-size: 20px;">Home</a>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="aboutus.html" style="font-size: 20px;">About</a>
+                      </li>
+                      <li class="rd-nav-item rd-navbar-submenu active" aria-haspopup="true">
+                        <button class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="products-menu" style="font-size: 20px;">Products</button>
+                        <ul id="products-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
+                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="#" data-product="axial">Axial Motor</a></li>
+                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="#" data-product="biodigester">Biodigester</a></li>
+                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="#" data-product="patient">Patient Shifter</a></li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
+                        <button class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu" style="font-size: 20px;">Technology</button>
+                        <ul id="tech-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
+                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="advantages.html">Advantages</a></li>
+                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="applications.html">Applications</a></li>
+                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="technology.html">Technology</a></li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html" style="font-size: 20px;">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      

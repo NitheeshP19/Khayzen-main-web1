@@ -1,0 +1,8 @@
+<li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
+  <button class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="products-menu" style="font-size: 20px;">Products</button>
+  <ul id="products-menu" class="rd-navbar-dropdown tech-grid-menu" role="menu" aria-hidden="true">
+    <li class="rd-dropdown-item tech-grid-item" role="none"><a role="menuitem" class="rd-dropdown-link tech-grid-link" href="typography.html"><span class="tech-grid-icon">⚙️</span><span class="tech-grid-label">Axial Motor</span></a></li>
+    <li class="rd-dropdown-item tech-grid-item" role="none"><a role="menuitem" class="rd-dropdown-link tech-grid-link" href="typography.html"><span class="tech-grid-icon">♻️</span><span class="tech-grid-label">Biodigester</span></a></li>
+    <li class="rd-dropdown-item tech-grid-item" role="none"><a role="menuitem" class="rd-dropdown-link tech-grid-link" href="typography.html"><span class="tech-grid-icon">🏥</span><span class="tech-grid-label">Patient Shifter</span></a></li>
+  </ul>
+</li>
