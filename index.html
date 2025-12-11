@@ -120,7 +120,29 @@
         border: 1px solid #e5e7eb;
       }
       /* ... detailed styling for popup contents, cards, icons, and animations ... */
-      
+      /* FIX MOBILE MENU HIDING DROPDOWNS */
+.rd-navbar-nav-wrap,
+.rd-navbar-dropdown,
+.rd-navbar-aside,
+.rd-navbar-aside-outer {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+/* Ensure dropdown expands in mobile view */
+.rd-navbar-submenu .rd-navbar-dropdown {
+    display: block !important;
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+}
+
+/* For safety – remove width clipping */
+.rd-navbar-aside-outer {
+    width: 100% !important;
+}
+
     </style>
   </head>
   <body>
