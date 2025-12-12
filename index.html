@@ -124,9 +124,61 @@
       }
       /* ... detailed styling for popup contents, cards, icons, and animations ... */
       /* FIX MOBILE MENU HIDING DROPDOWNS */
+/* FIX: Mobile menu should cover full screen */
+.rd-navbar-nav-wrap {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow-y: auto !important;
+    background: #ffffff !important;
+    z-index: 99999 !important;
+    transform: translateX(-100%) !important;
+    transition: transform 0.35s ease !important;
+}
+
+/* When menu is open */
+.rd-navbar-nav-wrap.active {
+    transform: translateX(0) !important;
+}
+
+/* Prevent page from scrolling when menu is open */
+html.rd-navbar-mobile body {
+    overflow: hidden !important;
+}
+
+/* FIX: Dropdowns inside mobile menu */
+.rd-navbar-nav .rd-navbar-submenu > .rd-navbar-dropdown {
+    position: relative !important;
+    display: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    background: #fff !important;
+}
+
+/* Show dropdown when active */
+.rd-navbar-submenu.open > .rd-navbar-dropdown {
+    display: block !important;
+}
+
+/* Make the mobile menu slide from left */
+.rd-navbar-mobile .rd-navbar-nav-wrap {
+    left: 0 !important;
+}
 
 
     </style>
+    <script>
+document.querySelectorAll(".rd-navbar-submenu .rd-nav-button").forEach(btn => {
+    btn.addEventListener("click", function () {
+        this.parentElement.classList.toggle("open");
+    });
+});
+</script>
+
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
