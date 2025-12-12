@@ -1,441 +1,671 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
-  <head>
-    <title>Applications - Khayzen</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:300,400,700%7CPoppins:300,400,500,700,900">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
-      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
-      
-      #products-menu .rd-dropdown-link { font-size: 18px !important; color: #333 !important; font-family: 'Poppins', sans-serif !important; font-weight: 400 !important; }
-      #tech-menu .rd-dropdown-link { font-size: 18px !important; color: #333 !important; font-family: 'Poppins', sans-serif !important; font-weight: 400 !important; }
-    </style>
-  </head>
-  <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
-        </div>
-        <p>Loading...</p>
+
+<head>
+  <title>Applications - Khayzen</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Montserrat:300,400,700%7CPoppins:300,400,500,700,900">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .ie-panel {
+      display: none;
+      background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+
+    #products-menu .rd-dropdown-link {
+      font-size: 18px !important;
+      color: #333 !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: 400 !important;
+    }
+
+    #tech-menu .rd-dropdown-link {
+      font-size: 18px !important;
+      color: #333 !important;
+      font-family: 'Poppins', sans-serif !important;
+      font-weight: 400 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+        src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
+        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
+  </div>
+  <div class="preloader">
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
       </div>
+      <p>Loading...</p>
     </div>
-      <div class="page">
-      <header class="section page-header">
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-stick-up="true">
-            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-            
-            <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark" style="width: 100vw;">
-              <div class="rd-navbar-aside" style="display: flex; align-items: center; justify-content: space-between; padding: 18px 30px; width: 100vw; margin: 0; flex-wrap: wrap; gap: 15px; flex-grow: 1;">
-                
-                <div style="flex-shrink: 0; display: flex; align-items: center;">
-                  <a class="brand-aside" href="index.html" style="display: flex; align-items: center; gap: 12px;font-size:25px;"><img src="images/favicon.ico" alt="Khayzen Systems" style="width: 75px; height: 75px;font-size:25px !important;"/><span style="color: #007bff; font-weight: 800; font-size: clamp(25px, 5vw, 38px); letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,123,255,0.3); white-space: nowrap;font-size:25px !important;">KHAYZEN SYSTEMS PVT LTD</span></a>
+  </div>
+  <div class="page">
+    <header class="section page-header">
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-stick-up="true">
+          <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse">
+            <span></span></div>
+
+          <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark" style="width: 100vw;">
+            <div class="rd-navbar-aside"
+              style="display: flex; align-items: center; justify-content: space-between; padding: 18px 30px; width: 100vw; margin: 0; flex-wrap: wrap; gap: 15px; flex-grow: 1;">
+
+              <div style="flex-shrink: 0; display: flex; align-items: center;">
+                <a class="brand-aside" href="index.html"
+                  style="display: flex; align-items: center; gap: 12px;font-size:25px;"><img src="images/favicon.ico"
+                    alt="Khayzen Systems" style="width: 75px; height: 75px;font-size:25px !important;" /><span
+                    style="color: #007bff; font-weight: 800; font-size: clamp(25px, 5vw, 38px); letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,123,255,0.3); white-space: nowrap;font-size:25px !important;">KHAYZEN
+                    SYSTEMS PVT LTD</span></a>
+              </div>
+
+              <div
+                style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 1;">
+
+                <div
+                  style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius:15px; border: 1px solid #38bdf8;">
+                  <span class="fa fa-phone" style="color: #ffffff; font-size: 14px;"></span>
+                  <a href="tel:+917217471790"
+                    style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 10px;">+91 7217471790</a>
+                </div>
+                <div
+                  style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 15px; border: 1px solid #38bdf8;">
+                  <span class="fa fa-envelope" style="color: #ffffff; font-size: 14px;"></span>
+                  <a href="mailto:Khayzen@gmail.com"
+                    style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 10px;">Khayzen@gmail.com</a>
+                </div>
+                <div
+                  style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 15px; border: 1px solid #38bdf8;">
+                  <span class="fa fa-map-marker" style="color: #ffffff; font-size: 14px;"></span>
+                  <span style="color: #ffffff; font-weight: 600; font-size: 10px;">Coimbatore, Tamil Nadu</span>
                 </div>
 
-                <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 1;">
-                  
-                  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius:15px; border: 1px solid #38bdf8;">
-                    <span class="fa fa-phone" style="color: #ffffff; font-size: 14px;"></span>
-                    <a href="tel:+917217471790" style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 10px;">+91 7217471790</a>
-                  </div>
-                  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 15px; border: 1px solid #38bdf8;">
-                    <span class="fa fa-envelope" style="color: #ffffff; font-size: 14px;"></span>
-                    <a href="mailto:Khayzen@gmail.com" style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 10px;">Khayzen@gmail.com</a>
-                  </div>
-                  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 15px; border: 1px solid #38bdf8;">
-                    <span class="fa fa-map-marker" style="color: #ffffff; font-size: 14px;"></span>
-                    <span style="color: #ffffff; font-weight: 600; font-size: 10px;">Coimbatore, Tamil Nadu</span>
-                  </div>
-
-                  <ul class="social-links" style="display: flex; gap: 10px; margin: 0; align-items: center; padding: 0; list-style: none;">
-                    <li><a class="fa fa-linkedin" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
-                    <li><a class="fa fa-twitter" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
-                    <li><a class="fa fa-facebook" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
-                    <li><a class="fa fa-instagram" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                <ul class="social-links"
+                  style="display: flex; gap: 10px; margin: 0; align-items: center; padding: 0; list-style: none;">
+                  <li><a class="fa fa-linkedin" href="#"
+                      style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;"
+                      onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'"
+                      onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                  <li><a class="fa fa-twitter" href="#"
+                      style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;"
+                      onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'"
+                      onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                  <li><a class="fa fa-facebook" href="#"
+                      style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;"
+                      onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'"
+                      onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                  <li><a class="fa fa-instagram" href="#"
+                      style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;"
+                      onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'"
+                      onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="rd-navbar-main-outer" style="background-color: #6c757d;">
+            <div class="rd-navbar-main" style="background-color: #6c757d;">
+              <div class="rd-navbar-panel" style="background-color: #6c757d;">
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <div class="rd-navbar-brand" style="visibility: hidden;">
+                </div>
+              </div>
+              <div class="rd-navbar-main-element">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html"
+                        style="font-size: 20px;">Home</a></li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="aboutus.html"
+                        style="font-size: 20px;">About</a></li>
+                    <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
+                      <button style="color: white !important;font-size: 20px;background-color:#0ea5e9 !important; "
+                        class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="products-menu"
+                        style="font-size: 20px;">Products</button>
+                      <ul id="products-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
+                        <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
+                            href="typography.html#axial">Axial Motor</a></li>
+                        <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
+                            href="typography.html#biodigester">Biodigester</a></li>
+                        <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
+                            href="typography.html#patient">Patient Shifter</a></li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
+                      <button style="color: white !important;font-size: 20px;background-color:#0ea5e9 !important;"
+                        class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu"
+                        style="font-size: 20px;">Technology</button>
+                      <ul id="tech-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
+                        <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
+                            href="technology.html#advantages">Advantages</a></li>
+                        <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
+                            href="technology.html#applications">Applications</a></li>
+                        <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
+                            href="technology.html#technology">Technology</a></li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html"
+                        style="font-size: 20px;">Contact</a></li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="rd-navbar-main-outer" style="background-color: #6c757d;">
-              <div class="rd-navbar-main" style="background-color: #6c757d;">
-                <div class="rd-navbar-panel" style="background-color: #6c757d;">
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <div class="rd-navbar-brand" style="visibility: hidden;">
-                  </div>
-                </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html" style="font-size: 20px;">Home</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="aboutus.html" style="font-size: 20px;">About</a></li>
-                      <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
-                        <button  style="color: white !important;font-size: 20px;background-color:#0ea5e9 !important; "  class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="products-menu" style="font-size: 20px;">Products</button>
-                        <ul id="products-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
-                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="typography.html#axial">Axial Motor</a></li>
-                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="typography.html#biodigester">Biodigester</a></li>
-                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="typography.html#patient">Patient Shifter</a></li>
-                        </ul>
-                      </li>
-                      <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
-                        <button style="color: white !important;font-size: 20px;background-color:#0ea5e9 !important;" class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu" style="font-size: 20px;">Technology</button>
-                        <ul id="tech-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
-                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="technology.html#advantages">Advantages</a></li>
-                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="technology.html#applications">Applications</a></li>
-                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="technology.html#technology">Technology</a></li>
-                        </ul>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html" style="font-size: 20px;">Contact</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
+          </div>
+        </nav>
+      </div>
+    </header>
 
-      <!-- Hero Section -->
-      <section style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; padding: 80px 0; text-align: center;">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-8">
-              <h1 class="display-3 font-weight-bold wow fadeInUp">Technology Applications</h1>
-              <p class="lead mt-3 wow fadeInUp" data-wow-delay=".2s">Discover where our innovative solutions make a difference</p>
-            </div>
+    <!-- Hero Section -->
+    <section
+      style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; padding: 80px 0; text-align: center;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="display-3 font-weight-bold wow fadeInUp">Technology Applications</h1>
+            <p class="lead mt-3 wow fadeInUp" data-wow-delay=".2s">Discover where our innovative solutions make a
+              difference</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Industry Applications Overview -->
-      <section class="section section-lg" style="background: #f8f9fa; padding: 60px 0;">
-        <div class="container">
-          <div class="row justify-content-center text-center mb-5">
-            <div class="col-lg-8">
-              <h2 style="font-size: 2rem; font-weight: 700; color: #1e3a8a; margin-bottom: 15px;">Industry Sectors</h2>
-              <div style="width: 80px; height: 3px; background: linear-gradient(90deg, #007bff, #0056b3); margin: 0 auto 20px;"></div>
-              <p style="font-size: 1rem; color: #64748b;">Powering innovation across multiple industries</p>
+    <!-- Industry Applications Overview -->
+    <section class="section section-lg" style="background: #f8f9fa; padding: 60px 0;">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-lg-8">
+            <h2 style="font-size: 2rem; font-weight: 700; color: #1e3a8a; margin-bottom: 15px;">Industry Sectors</h2>
+            <div
+              style="width: 80px; height: 3px; background: linear-gradient(90deg, #007bff, #0056b3); margin: 0 auto 20px;">
             </div>
+            <p style="font-size: 1rem; color: #64748b;">Powering innovation across multiple industries</p>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <div class="row g-4">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                  <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">🚗</div>
-                    <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Automotive</h5>
-                  </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="row g-4">
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div
+                  style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
+                  <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">
+                    🚗</div>
+                  <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Automotive</h5>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                  <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">🏭</div>
-                    <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Industrial Automation</h5>
-                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div
+                  style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
+                  <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">
+                    🏭</div>
+                  <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Industrial Automation</h5>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                  <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">🏥</div>
-                    <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Healthcare</h5>
-                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div
+                  style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
+                  <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">
+                    🏥</div>
+                  <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Healthcare</h5>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                  <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">✈️</div>
-                    <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Aerospace</h5>
-                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div
+                  style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
+                  <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">
+                    ✈️</div>
+                  <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Aerospace</h5>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                  <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">🤖</div>
-                    <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Robotics</h5>
-                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div
+                  style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
+                  <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">
+                    🤖</div>
+                  <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Robotics</h5>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                  <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">🚢</div>
-                    <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Marine</h5>
-                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div
+                  style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
+                  <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">
+                    🚢</div>
+                  <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Marine</h5>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                  <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">⚡</div>
-                    <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Energy Systems</h5>
-                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div
+                  style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
+                  <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">
+                    ⚡</div>
+                  <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Energy Systems</h5>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                  <div style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
-                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">🔧</div>
-                    <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Manufacturing</h5>
-                  </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div
+                  style="background: white; padding: 25px; border-radius: 12px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 20px rgba(0,123,255,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.08)'">
+                  <div
+                    style="width: 60px; height: 60px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 24px;">
+                    🔧</div>
+                  <h5 style="font-size: 15px; font-weight: 600; color: #1e293b; margin: 0;">Manufacturing</h5>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Detailed Applications Section -->
-      <section class="section section-lg" style="background: white; padding: 80px 0;">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <div style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-size: 2.5rem; font-weight: 700; color: #333; margin-bottom: 15px;">Industry Applications</h2>
-                <div style="width: 100px; height: 4px; background: linear-gradient(90deg, #007bff, #0056b3); margin: 0 auto 20px; box-shadow: 0 2px 10px rgba(0,123,255,0.3);"></div>
-                <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">Transforming industries with cutting-edge motor technology solutions</p>
+    <!-- Detailed Applications Section -->
+    <section class="section section-lg" style="background: white; padding: 80px 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <h2 style="font-size: 2.5rem; font-weight: 700; color: #333; margin-bottom: 15px;">Industry Applications
+              </h2>
+              <div
+                style="width: 100px; height: 4px; background: linear-gradient(90deg, #007bff, #0056b3); margin: 0 auto 20px; box-shadow: 0 2px 10px rgba(0,123,255,0.3);">
               </div>
-              
-              <div class="row">
-                <div class="col-lg-6 mb-4">
-                  <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); height: 100%; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'">
-                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
-                    <div style="font-size: 3.5rem; margin-bottom: 20px; position: relative;">🚗</div>
-                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.6rem; font-weight: 700; position: relative;">Electric Vehicles</h4>
-                    <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; position: relative;">Powering the future of transportation with high-efficiency axial flux motors for EVs, hybrid systems, and e-mobility solutions. Our technology delivers exceptional torque density and energy efficiency for extended range.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ High power density for compact design</li>
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Superior thermal management</li>
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Extended battery range</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="col-lg-6 mb-4">
-                  <div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); height: 100%; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'">
-                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
-                    <div style="font-size: 3.5rem; margin-bottom: 20px; position: relative;">🏭</div>
-                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.6rem; font-weight: 700; position: relative;">Industrial Automation</h4>
-                    <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; position: relative;">Revolutionizing manufacturing with precision motor control for robotics, CNC machines, conveyor systems, and automated production lines. Delivering consistent performance in demanding industrial environments.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Precision motion control</li>
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ 24/7 operational reliability</li>
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Reduced maintenance costs</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="col-lg-6 mb-4">
-                  <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); height: 100%; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'">
-                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
-                    <div style="font-size: 3.5rem; margin-bottom: 20px; position: relative;">🌊</div>
-                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.6rem; font-weight: 700; position: relative;">Renewable Energy</h4>
-                    <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; position: relative;">Enabling sustainable energy generation with efficient motors for wind turbines, solar tracking systems, and hydroelectric applications. Contributing to a cleaner, greener future with optimized energy conversion.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Maximum energy conversion</li>
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Weather-resistant design</li>
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Long operational lifespan</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="col-lg-6 mb-4">
-                  <div style="background: linear-gradient(135deg, #fa709a, #fee140); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); height: 100%; transition: all 0.3s ease; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'">
-                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%;"></div>
-                    <div style="font-size: 3.5rem; margin-bottom: 20px; position: relative;">✈️</div>
-                    <h4 style="color: white; margin-bottom: 15px; font-size: 1.6rem; font-weight: 700; position: relative;">Aerospace & Defense</h4>
-                    <p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; position: relative;">Mission-critical motor systems for aerospace applications, UAVs, and defense equipment. Engineered for extreme conditions with uncompromising reliability and lightweight construction for optimal performance.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Ultra-lightweight design</li>
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Extreme environment operation</li>
-                      <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Mission-critical reliability</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">Transforming industries with
+                cutting-edge motor technology solutions</p>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Use Cases Section -->
-      <section class="section section-lg" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 80px 0;">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <div style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-size: 2.5rem; font-weight: 700; color: #333; margin-bottom: 15px;">Real-World Use Cases</h2>
-                <div style="width: 100px; height: 4px; background: linear-gradient(90deg, #007bff, #0056b3); margin: 0 auto 20px; box-shadow: 0 2px 10px rgba(0,123,255,0.3);"></div>
-                <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">See how our technology solves real challenges across diverse sectors</p>
-              </div>
-              
-              <div class="row">
-                <div class="col-md-4 mb-4">
-                  <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(102,126,234,0.3);"><span style="font-size: 2rem;">🤖</span></div>
-                    <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Collaborative Robots</h5>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Precise motor control enabling safe human-robot collaboration in manufacturing and assembly operations</p>
+            <div class="row">
+              <div class="col-lg-6 mb-4">
+                <div
+                  style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); height: 100%; transition: all 0.3s ease; position: relative; overflow: hidden;"
+                  onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.2)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'">
+                  <div
+                    style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%;">
                   </div>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                  <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(240,147,251,0.3);"><span style="font-size: 2rem;">🚁</span></div>
-                    <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Drone Propulsion</h5>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Lightweight, high-efficiency motors for commercial drones, delivery systems, and aerial surveillance</p>
-                  </div>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                  <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(79,172,254,0.3);"><span style="font-size: 2rem;">🏥</span></div>
-                    <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Medical Devices</h5>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Ultra-quiet, precise motors for surgical robots, diagnostic equipment, and patient care systems</p>
-                  </div>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                  <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #fa709a, #fee140); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(250,112,154,0.3);"><span style="font-size: 2rem;">⚡</span></div>
-                    <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Energy Storage</h5>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Efficient motor-generator systems for flywheel energy storage and grid stabilization</p>
-                  </div>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                  <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(67,233,123,0.3);"><span style="font-size: 2rem;">🚢</span></div>
-                    <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Marine Propulsion</h5>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Corrosion-resistant motors for electric boats, underwater vehicles, and marine automation</p>
-                  </div>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                  <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
-                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #a8edea, #fed6e3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(168,237,234,0.3);"><span style="font-size: 2rem;">🏠</span></div>
-                    <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Smart Home</h5>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Quiet, efficient motors for HVAC systems, automated blinds, and smart appliances</p>
-                  </div>
+                  <div style="font-size: 3.5rem; margin-bottom: 20px; position: relative;">🚗</div>
+                  <h4
+                    style="color: white; margin-bottom: 15px; font-size: 1.6rem; font-weight: 700; position: relative;">
+                    Electric Vehicles</h4>
+                  <p
+                    style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; position: relative;">
+                    Powering the future of transportation with high-efficiency axial flux motors for EVs, hybrid
+                    systems, and e-mobility solutions. Our technology delivers exceptional torque density and energy
+                    efficiency for extended range.</p>
+                  <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ High power density
+                      for compact design</li>
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Superior thermal
+                      management</li>
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Extended battery
+                      range</li>
+                  </ul>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Performance Metrics Section -->
-      <section class="section section-lg" style="background: white; padding: 80px 0;">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
-              <div style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-size: 2.5rem; font-weight: 700; color: #333; margin-bottom: 15px;">Performance Across Applications</h2>
-                <div style="width: 100px; height: 4px; background: linear-gradient(90deg, #007bff, #0056b3); margin: 0 auto 20px; box-shadow: 0 2px 10px rgba(0,123,255,0.3);"></div>
-                <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">Consistent excellence across diverse operating conditions</p>
+              <div class="col-lg-6 mb-4">
+                <div
+                  style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); height: 100%; transition: all 0.3s ease; position: relative; overflow: hidden;"
+                  onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.2)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'">
+                  <div
+                    style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%;">
+                  </div>
+                  <div style="font-size: 3.5rem; margin-bottom: 20px; position: relative;">🏭</div>
+                  <h4
+                    style="color: white; margin-bottom: 15px; font-size: 1.6rem; font-weight: 700; position: relative;">
+                    Industrial Automation</h4>
+                  <p
+                    style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; position: relative;">
+                    Revolutionizing manufacturing with precision motor control for robotics, CNC machines, conveyor
+                    systems, and automated production lines. Delivering consistent performance in demanding industrial
+                    environments.</p>
+                  <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Precision motion
+                      control</li>
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ 24/7 operational
+                      reliability</li>
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Reduced maintenance
+                      costs</li>
+                  </ul>
+                </div>
               </div>
-              
-              <div class="row">
-                <div class="col-md-3 mb-4">
-                  <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 35px 25px; border-radius: 15px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 10px;">500+</div>
-                    <div style="color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 600;">Installations Worldwide</div>
+
+              <div class="col-lg-6 mb-4">
+                <div
+                  style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); height: 100%; transition: all 0.3s ease; position: relative; overflow: hidden;"
+                  onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.2)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'">
+                  <div
+                    style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%;">
                   </div>
+                  <div style="font-size: 3.5rem; margin-bottom: 20px; position: relative;">🌊</div>
+                  <h4
+                    style="color: white; margin-bottom: 15px; font-size: 1.6rem; font-weight: 700; position: relative;">
+                    Renewable Energy</h4>
+                  <p
+                    style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; position: relative;">
+                    Enabling sustainable energy generation with efficient motors for wind turbines, solar tracking
+                    systems, and hydroelectric applications. Contributing to a cleaner, greener future with optimized
+                    energy conversion.</p>
+                  <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Maximum energy
+                      conversion</li>
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Weather-resistant
+                      design</li>
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Long operational
+                      lifespan</li>
+                  </ul>
                 </div>
-                
-                <div class="col-md-3 mb-4">
-                  <div style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 35px 25px; border-radius: 15px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 10px;">15+</div>
-                    <div style="color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 600;">Industry Sectors</div>
+              </div>
+
+              <div class="col-lg-6 mb-4">
+                <div
+                  style="background: linear-gradient(135deg, #fa709a, #fee140); padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); height: 100%; transition: all 0.3s ease; position: relative; overflow: hidden;"
+                  onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 40px rgba(0,0,0,0.2)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.15)'">
+                  <div
+                    style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255,255,255,0.1); border-radius: 50%;">
                   </div>
-                </div>
-                
-                <div class="col-md-3 mb-4">
-                  <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 35px 25px; border-radius: 15px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 10px;">99.8%</div>
-                    <div style="color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 600;">Uptime Reliability</div>
-                  </div>
-                </div>
-                
-                <div class="col-md-3 mb-4">
-                  <div style="background: linear-gradient(135deg, #43e97b, #38f9d7); padding: 35px 25px; border-radius: 15px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 10px;">30%</div>
-                    <div style="color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 600;">Energy Savings</div>
-                  </div>
+                  <div style="font-size: 3.5rem; margin-bottom: 20px; position: relative;">✈️</div>
+                  <h4
+                    style="color: white; margin-bottom: 15px; font-size: 1.6rem; font-weight: 700; position: relative;">
+                    Aerospace & Defense</h4>
+                  <p
+                    style="color: rgba(255,255,255,0.95); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px; position: relative;">
+                    Mission-critical motor systems for aerospace applications, UAVs, and defense equipment. Engineered
+                    for extreme conditions with uncompromising reliability and lightweight construction for optimal
+                    performance.</p>
+                  <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Ultra-lightweight
+                      design</li>
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Extreme environment
+                      operation</li>
+                    <li style="color: rgba(255,255,255,0.9); padding: 8px 0; font-size: 0.95rem;">✓ Mission-critical
+                      reliability</li>
+                  </ul>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="section section-lg" style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 80px 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <h2 style="font-size: 2.5rem; font-weight: 700; color: #333; margin-bottom: 15px;">Real-World Use Cases
+              </h2>
+              <div
+                style="width: 100px; height: 4px; background: linear-gradient(90deg, #007bff, #0056b3); margin: 0 auto 20px; box-shadow: 0 2px 10px rgba(0,123,255,0.3);">
+              </div>
+              <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">See how our technology solves
+                real challenges across diverse sectors</p>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div
+                  style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                  <div
+                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(102,126,234,0.3);">
+                    <span style="font-size: 2rem;">🤖</span></div>
+                  <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Collaborative
+                    Robots</h5>
+                  <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Precise motor control
+                    enabling safe human-robot collaboration in manufacturing and assembly operations</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-4">
+                <div
+                  style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                  <div
+                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(240,147,251,0.3);">
+                    <span style="font-size: 2rem;">🚁</span></div>
+                  <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Drone Propulsion
+                  </h5>
+                  <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Lightweight, high-efficiency
+                    motors for commercial drones, delivery systems, and aerial surveillance</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-4">
+                <div
+                  style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                  <div
+                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(79,172,254,0.3);">
+                    <span style="font-size: 2rem;">🏥</span></div>
+                  <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Medical Devices
+                  </h5>
+                  <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Ultra-quiet, precise motors
+                    for surgical robots, diagnostic equipment, and patient care systems</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-4">
+                <div
+                  style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                  <div
+                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #fa709a, #fee140); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(250,112,154,0.3);">
+                    <span style="font-size: 2rem;">⚡</span></div>
+                  <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Energy Storage</h5>
+                  <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Efficient motor-generator
+                    systems for flywheel energy storage and grid stabilization</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-4">
+                <div
+                  style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                  <div
+                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(67,233,123,0.3);">
+                    <span style="font-size: 2rem;">🚢</span></div>
+                  <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Marine Propulsion
+                  </h5>
+                  <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Corrosion-resistant motors
+                    for electric boats, underwater vehicles, and marine automation</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 mb-4">
+                <div
+                  style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); text-align: center; height: 100%; transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 35px rgba(0,0,0,0.15)'"
+                  onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'">
+                  <div
+                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #a8edea, #fed6e3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 4px 15px rgba(168,237,234,0.3);">
+                    <span style="font-size: 2rem;">🏠</span></div>
+                  <h5 style="color: #333; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;">Smart Home</h5>
+                  <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin: 0;">Quiet, efficient motors for
+                    HVAC systems, automated blinds, and smart appliances</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Performance Metrics Section -->
+    <section class="section section-lg" style="background: white; padding: 80px 0;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <h2 style="font-size: 2.5rem; font-weight: 700; color: #333; margin-bottom: 15px;">Performance Across
+                Applications</h2>
+              <div
+                style="width: 100px; height: 4px; background: linear-gradient(90deg, #007bff, #0056b3); margin: 0 auto 20px; box-shadow: 0 2px 10px rgba(0,123,255,0.3);">
+              </div>
+              <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">Consistent excellence across
+                diverse operating conditions</p>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3 mb-4">
+                <div
+                  style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 35px 25px; border-radius: 15px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 10px;">500+</div>
+                  <div style="color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 600;">Installations Worldwide
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div
+                  style="background: linear-gradient(135deg, #f093fb, #f5576c); padding: 35px 25px; border-radius: 15px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 10px;">15+</div>
+                  <div style="color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 600;">Industry Sectors</div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div
+                  style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 35px 25px; border-radius: 15px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 10px;">99.8%</div>
+                  <div style="color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 600;">Uptime Reliability</div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div
+                  style="background: linear-gradient(135deg, #43e97b, #38f9d7); padding: 35px 25px; border-radius: 15px; text-align: center; box-shadow: 0 8px 25px rgba(0,0,0,0.15); transition: all 0.3s ease;"
+                  onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                  <div style="font-size: 2.5rem; font-weight: 700; color: white; margin-bottom: 10px;">30%</div>
+                  <div style="color: rgba(255,255,255,0.9); font-size: 1rem; font-weight: 600;">Energy Savings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!--Footer-->
+  <footer class="section footer-classic section-sm">
+    <div class="container">
+      <div class="row row-30">
+        <div class="col-lg-3 wow fadeInLeft">
+          <a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-200x34.png" alt=""
+              width="100" height="17" /><img class="brand-logo-light" src="images/logo-inverse-200x34.png" alt=""
+              width="100" height="17" /></a>
+          <p class="footer-classic-description offset-top-0 offset-right-25">Khazen brings together industry experts,
+            engineers, and technical specialists with years of hands-on experience in manufacturing and product
+            development.</p>
+        </div>
+        <div class="col-lg-3 col-sm-8 wow fadeInUp">
+          <P class="footer-classic-title">contact info</P>
+          <div class="d-block offset-top-0">Coimbatore, Tamil Nadu, India<span class="d-lg-block">Coimbatore, Tamil
+              Nadu</span></div><a class="d-inline-block accent-link"
+            href="mailto:Khayzen@gmail.com">Khayzen@gmail.com</a><a class="d-inline-block" href="tel:+917217471790">+91
+            7217471790</a>
+          <ul>
+            <li>Mon-Thu:<span class="d-inline-block offset-left-10 text-white">9:30 AM - 9:00 PM</span></li>
+            <li>Fri:<span class="d-inline-block offset-left-10 text-white">10:00 AM - 9:00 PM</span></li>
+            <li>Sat:<span class="d-inline-block offset-left-10 text-white">10:00 AM - 3:00 PM</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-4 wow fadeInUp" data-wow-delay=".3s">
+          <P class="footer-classic-title">Quick Links</P>
+          <ul class="footer-classic-nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="typography.html">Products</a></li>
+            <li><a href="technology.html#technology">Technology</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
+          <P class="footer-classic-title">newsletter</P>
+          <form class="rd-mailform text-left footer-classic-subscribe-form" data-form-output="form-output-global"
+            data-form-type="contact" method="post" action="bat/rd-mailform.php">
+            <div class="form-wrap">
+              <label class="form-label" for="subscribe-email">Your Email Address</label>
+              <input class="form-input" id="subscribe-email" type="email" name="email"
+                data-constraints="@Email @Required">
+            </div>
+            <div class="form-button group-sm text-center text-lg-left">
+              <button class="button button-primary button-circle" type="submit">sign up</button>
+            </div>
+          </form>
+          <p>Be the first to find out about our latest news, updates, and special offers.</p>
+        </div>
+      </div>
     </div>
-
-      <!--Footer-->
-      <footer class="section footer-classic section-sm">
-        <div class="container">
-          <div class="row row-30">
-            <div class="col-lg-3 wow fadeInLeft">
-              <a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-200x34.png" alt="" width="100" height="17"/><img class="brand-logo-light" src="images/logo-inverse-200x34.png" alt="" width="100" height="17"/></a>
-              <p class="footer-classic-description offset-top-0 offset-right-25">Khazen brings together industry experts, engineers, and technical specialists with years of hands-on experience in manufacturing and product development.</p>
-            </div>
-            <div class="col-lg-3 col-sm-8 wow fadeInUp">
-              <P class="footer-classic-title">contact info</P>
-              <div class="d-block offset-top-0">Coimbatore, Tamil Nadu, India<span class="d-lg-block">Coimbatore, Tamil Nadu</span></div><a class="d-inline-block accent-link" href="mailto:Khayzen@gmail.com">Khayzen@gmail.com</a><a class="d-inline-block" href="tel:+917217471790">+91 7217471790</a>
-              <ul>
-                <li>Mon-Thu:<span class="d-inline-block offset-left-10 text-white">9:30 AM - 9:00 PM</span></li>
-                <li>Fri:<span class="d-inline-block offset-left-10 text-white">10:00 AM - 9:00 PM</span></li>
-                <li>Sat:<span class="d-inline-block offset-left-10 text-white">10:00 AM - 3:00 PM</span></li>
-              </ul>
-            </div>
-            <div class="col-lg-2 col-sm-4 wow fadeInUp" data-wow-delay=".3s">
-              <P class="footer-classic-title">Quick Links</P>
-              <ul class="footer-classic-nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About us</a></li>
-                <li><a href="typography.html">Products</a></li>
-                <li><a href="technology.html#technology">Technology</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-              </ul>
-            </div>
-            <div class="col-lg-4 wow fadeInLeft" data-wow-delay=".2s">
-              <P class="footer-classic-title">newsletter</P>
-              <form class="rd-mailform text-left footer-classic-subscribe-form" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-                <div class="form-wrap">
-                  <label class="form-label" for="subscribe-email">Your Email Address</label>
-                  <input class="form-input" id="subscribe-email" type="email" name="email" data-constraints="@Email @Required">
-                </div>
-                <div class="form-button group-sm text-center text-lg-left">
-                  <button class="button button-primary button-circle" type="submit">sign up</button>
-                </div>
-              </form>
-              <p>Be the first to find out about our latest news, updates, and special offers.</p>
-            </div>
-          </div>
-        </div>
-        <div class="container wow fadeInUp" data-wow-delay=".4s">
-          <div class="footer-classic-aside">
-            <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Khayzen Systems</p>
-            <ul class="social-links">
-              <li><a class="fa fa-linkedin" href="#"></a></li>
-              <li><a class="fa fa-twitter" href="#"></a></li>
-              <li><a class="fa fa-facebook" href="#"></a></li>
-              <li><a class="fa fa-instagram" href="#"></a></li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+    <div class="container wow fadeInUp" data-wow-delay=".4s">
+      <div class="footer-classic-aside">
+        <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Khayzen
+          Systems</p>
+        <ul class="social-links">
+          <li><a class="fa fa-linkedin" href="#"></a></li>
+          <li><a class="fa fa-twitter" href="#"></a></li>
+          <li><a class="fa fa-facebook" href="#"></a></li>
+          <li><a class="fa fa-instagram" href="#"></a></li>
+        </ul>
+      </div>
     </div>
-    <div class="snackbars" id="form-output-global"></div>
+  </footer>
+  </div>
+  <div class="snackbars" id="form-output-global"></div>
 
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-      document.querySelectorAll('.rd-nav-button').forEach(btn => {
-        btn.onclick = e => {
-          e.preventDefault();
-          const menu = document.getElementById(btn.getAttribute('aria-controls'));
-          if (!menu) return;
-          const isOpen = btn.getAttribute('aria-expanded') === 'true';
-          btn.setAttribute('aria-expanded', !isOpen);
-          menu.style.display = isOpen ? 'none' : 'block';
-        };
-      });
-    </script>
-  </body>
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/mobile-nav.js"></script>
+</body>
+
 </html>

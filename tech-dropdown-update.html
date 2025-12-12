@@ -2,7 +2,8 @@
 
 <!-- Updated Technology Menu Item -->
 <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
-  <button class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu" style="font-size: 20px;">Technology</button>
+  <button class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu"
+    style="font-size: 20px;">Technology</button>
   <div id="tech-menu" class="tech-mega-menu" role="menu" aria-hidden="true">
     <div class="tech-menu-grid">
       <div class="tech-menu-item" onclick="showTechSection('advantages'); return false;">
@@ -23,114 +24,3 @@
     </div>
   </div>
 </li>
-
-<!-- CSS STYLES - Add to your <style> section -->
-<style>
-.tech-mega-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-  padding: 25px;
-  margin-top: 15px;
-  z-index: 1000;
-  min-width: 500px;
-}
-
-.tech-mega-menu.active {
-  display: block;
-  animation: slideDown 0.3s ease;
-}
-
-@keyframes slideDown {
-  from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
-  to { opacity: 1; transform: translateX(-50%) translateY(0); }
-}
-
-.tech-menu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.tech-menu-item {
-  padding: 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: 2px solid #f0f0f0;
-  text-align: center;
-}
-
-.tech-menu-item:hover {
-  background: #f8f9ff;
-  border-color: #007bff;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,123,255,0.1);
-}
-
-.tech-menu-icon {
-  font-size: 40px;
-  margin-bottom: 10px;
-}
-
-.tech-menu-title {
-  font-weight: 600;
-  color: #1e3a8a;
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
-.tech-menu-desc {
-  font-size: 13px;
-  color: #999;
-}
-
-@media (max-width: 768px) {
-  .tech-mega-menu {
-    min-width: 350px;
-  }
-  .tech-menu-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-  .tech-menu-item {
-    padding: 15px;
-  }
-  .tech-menu-icon {
-    font-size: 32px;
-  }
-}
-</style>
-
-<!-- JAVASCRIPT - Replace the initTechDropdown function with this -->
-<script>
-function initTechDropdown() {
-  const techButton = document.querySelector('.rd-nav-button[aria-controls="tech-menu"]');
-  const techMenu = document.getElementById('tech-menu');
-  if (techButton && techMenu) {
-    techButton.onclick = function(e) {
-      e.preventDefault();
-      techMenu.classList.toggle('active');
-      techButton.setAttribute('aria-expanded', techMenu.classList.contains('active'));
-    };
-  }
-}
-
-// Close menu when clicking outside
-document.addEventListener('click', function(e) {
-  const techMenu = document.getElementById('tech-menu');
-  if (techMenu && !e.target.closest('.rd-navbar-submenu')) {
-    techMenu.classList.remove('active');
-  }
-});
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-  initTechDropdown();
-});
-</script>

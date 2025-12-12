@@ -1,249 +1,302 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
-  <head>
-    <title>Products - Khayzen</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:300,400,700%7CPoppins:300,400,500,700,900">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
-      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
-      .product-card {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      }
-      .product-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      }
-      .product-image {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-      .product-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(transparent, rgba(0,0,0,0.8));
-        color: white;
-        padding: 20px;
-        text-align: center;
-      }
-      .product-title {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-      .product-description {
-        font-size: 14px;
-        opacity: 0.9;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-container">
-          <div class="cssload-speeding-wheel"></div>
-        </div>
-        <p>Loading...</p>
+
+<head>
+  <title>Products - Khayzen</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=Montserrat:300,400,700%7CPoppins:300,400,500,700,900">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .ie-panel {
+      display: none;
+      background: #212121;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+
+    .product-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-description {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img
+        src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
+        alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
+  </div>
+  <div class="preloader">
+    <div class="preloader-body">
+      <div class="cssload-container">
+        <div class="cssload-speeding-wheel"></div>
       </div>
+      <p>Loading...</p>
     </div>
-    
-    <div class="page">
-      <header class="section page-header">
-        <!--RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-            <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark">
-              <div class="rd-navbar-aside">
-                <a class="brand-aside" href="index.html"><img src="images/favicon.ico" alt="Khayzen"/></a>
-                <ul class="list-inline navbar-contact-list">
+  </div>
+
+  <div class="page">
+    <header class="section page-header">
+      <!--RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static"
+          data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+          data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px"
+          data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse">
+            <span></span>
+          </div>
+          <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark">
+            <div class="rd-navbar-aside">
+              <a class="brand-aside" href="index.html"><img src="images/favicon.ico" alt="Khayzen" /></a>
+              <ul class="list-inline navbar-contact-list">
+                <li>
+                  <div class="unit unit-spacing-xs align-items-center">
+                    <div class="unit-left"><span class="icon text-middle fa-phone"></span></div>
+                    <div class="unit-body"><a href="tel:#">+91 7217471790</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit unit-spacing-xs align-items-center">
+                    <div class="unit-left"><span class="icon text-middle fa-envelope"></span></div>
+                    <div class="unit-body"><a href="mailto:#">Khayzen@gmail.com</a></div>
+                  </div>
+                </li>
+              </ul>
+              <span class="khayzen-middle-name">Khayzen</span>
+              <div class="aside-right-section">
+                <ul class="list-inline navbar-contact-list location-only">
                   <li>
                     <div class="unit unit-spacing-xs align-items-center">
-                      <div class="unit-left"><span class="icon text-middle fa-phone"></span></div>
-                      <div class="unit-body"><a href="tel:#">+91 7217471790</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="unit unit-spacing-xs align-items-center">
-                      <div class="unit-left"><span class="icon text-middle fa-envelope"></span></div>
-                      <div class="unit-body"><a href="mailto:#">Khayzen@gmail.com</a></div>
+                      <div class="unit-left"><span class="icon text-middle fa-map-marker"></span></div>
+                      <div class="unit-body"><a href="#">coimbatore</a></div>
                     </div>
                   </li>
                 </ul>
-                <span class="khayzen-middle-name">Khayzen</span>
-                <div class="aside-right-section">
-                  <ul class="list-inline navbar-contact-list location-only">
-                    <li>
-                      <div class="unit unit-spacing-xs align-items-center">
-                        <div class="unit-left"><span class="icon text-middle fa-map-marker"></span></div>
-                        <div class="unit-body"><a href="#">coimbatore</a></div>
-                      </div>
+                <ul class="social-links">
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-linkedin" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="rd-navbar-main-outer" style="background-color: #6c757d;">
+            <div class="rd-navbar-main" style="background-color: #6c757d;">
+              <!--RD Navbar Panel-->
+              <div class="rd-navbar-panel" style="background-color: #6c757d;">
+                <!--RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!--RD Navbar Brand-->
+                <div class="rd-navbar-brand">
+                  <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark"
+                      src="images/logo-inverse-200x34.png" alt="" width="500" height="300" /><img
+                      class="brand-logo-light" src="images/logo-inverse-200x34.png" alt="" width="500"
+                      height="300" /></a>
+                </div>
+              </div>
+              <div class="rd-navbar-main-element">
+                <div class="rd-navbar-nav-wrap">
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html" style="font-size: 20px;">Home</a>
                     </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="aboutus.html"
+                        style="font-size: 20px;">About</a></li>
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="products.html"
+                        style="font-size: 20px;">Products</a></li>
+                    <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
+                      <button style="color: white !important;font-size: 20px;background-color:#0ea5e9 !important;"
+                        class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu"
+                        style="font-size: 20px;">Technology</button>
+                      <ul id="tech-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
+                        <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
+                            href="technology.html#advantages">Advantages</a></li>
+                        <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
+                            href="technology.html#applications">Applications</a></li>
+                      </ul>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html"
+                        style="font-size: 20px;">Contact</a></li>
                   </ul>
-                  <ul class="social-links">
-                    <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-linkedin" href="#"></a></li>
-                    <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-twitter" href="#"></a></li>
-                    <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-facebook" href="#"></a></li>
-                    <li><a class="icon icon-sm icon-circle icon-circle-md icon-bg-white fa-instagram" href="#"></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!--RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <!--RD Navbar Toggle-->
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!--RD Navbar Brand-->
-                  <div class="rd-navbar-brand">
-                    <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/><img class="brand-logo-light" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/></a>
-                  </div>
-                </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html" style="font-size: 20px;">Home</a></li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="aboutus.html" style="font-size: 20px;">About</a></li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="products.html" style="font-size: 20px;">Products</a></li>
-                      <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
-                        <button class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu" style="font-size: 20px;">Technology</button>
-                        <ul id="tech-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
-                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="technology.html#advantages">Advantages</a></li>
-                          <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="technology.html#applications">Applications</a></li>
-                        </ul>
-                      </li>
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html" style="font-size: 20px;">Contact</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-
-      <!-- Page Header -->
-      <section class="section section-intro context-dark">
-        <div class="intro-bg" style="background: url(images/bg-1-1700x803.png) no-repeat;background-size:cover;background-position: center center;"></div>
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8 text-center">
-              <h1 class="font-weight-bold wow fadeInLeft text-white">Our Products</h1>
-              <p class="intro-description wow fadeInRight text-white">Innovative Solutions for Modern Challenges</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Products Section -->
-      <section class="section section-lg bg-default">
-        <div class="container">
-          <div class="row row-50 justify-content-center">
-            <div class="col-12 text-center">
-              <div class="section-name wow fadeInRight" data-wow-delay=".2s">Featured Products</div>
-              <h3 class="wow fadeInLeft text-capitalize" data-wow-delay=".3s">
-                Discover Our <span class="text-primary">Premium Solutions</span>
-              </h3>
-              <p class="offset-top-20">Click on any product to learn more about its features and specifications</p>
-            </div>
-          </div>
-
-          <div class="row row-50 justify-content-center offset-top-50">
-            <!-- Product 1 -->
-            <div class="col-lg-5 col-md-6 wow fadeInLeft" data-wow-delay=".3s">
-              <div class="product-card" onclick="window.location.href='product1.html'">
-                <img src="images/p1.jpeg" alt="Industrial Motor" class="product-image">
-                <div class="product-overlay">
-                  <div class="product-title">Industrial Motor</div>
-                  <div class="product-description">High-performance axial motor designed for industrial applications with superior efficiency and reliability.</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="col-lg-5 col-md-6 wow fadeInRight" data-wow-delay=".4s">
-              <div class="product-card" onclick="window.location.href='product2.html'">
-                <img src="images/p2.jpeg" alt="Biodigester System" class="product-image">
-                <div class="product-overlay">
-                  <div class="product-title">Biodigester System</div>
-                  <div class="product-description">Eco-friendly waste management solution that converts organic waste into clean energy and fertilizer.</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </nav>
+      </div>
+    </header>
 
-      <!-- Footer -->
-      <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
-        <div class="container">
-          <div class="row row-30">
-            <div class="col-lg-4 col-xl-5">
-              <div class="pr-xl-4">
-                <a class="brand" href="index.html"><img class="brand-logo-light" src="images/logo-inverse-200x34.png" alt="" width="100" height="17"/></a>
-                <p>Khayzen provides innovative engineering solutions for industrial and environmental challenges. Our products are designed with cutting-edge technology to deliver superior performance and sustainability.</p>
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year">2024</span><span>&nbsp;</span><span>Khayzen</span><span>.&nbsp;</span><span>All Rights Reserved.</span></p>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <h5>Contacts</h5>
-              <dl class="contact-list">
-                <dt>Address:</dt>
-                <dd>Coimbatore, Tamil Nadu, India</dd>
-              </dl>
-              <dl class="contact-list">
-                <dt>email:</dt>
-                <dd><a href="mailto:#">Khayzen@gmail.com</a></dd>
-              </dl>
-              <dl class="contact-list">
-                <dt>phones:</dt>
-                <dd><a href="tel:#">+91 7217471790</a></dd>
-              </dl>
-            </div>
-            <div class="col-lg-4 col-xl-3">
-              <h5>Links</h5>
-              <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contacts.html">Contact</a></li>
-              </ul>
-            </div>
+    <!-- Page Header -->
+    <section class="section section-intro context-dark">
+      <div class="intro-bg"
+        style="background: url(images/bg-1-1700x803.png) no-repeat;background-size:cover;background-position: center center;">
+      </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 text-center">
+            <h1 class="font-weight-bold wow fadeInLeft text-white">Our Products</h1>
+            <p class="intro-description wow fadeInRight text-white">Innovative Solutions for Modern Challenges</p>
           </div>
         </div>
-        <div class="row no-gutters social-container">
-          <div class="col">
-            <div class="social-inner">
-              <div class="social-links">
-                <a class="social-link" href="#"><i class="fa fa-facebook"></i></a>
-                <a class="social-link" href="#"><i class="fa fa-twitter"></i></a>
-                <a class="social-link" href="#"><i class="fa fa-google-plus"></i></a>
-                <a class="social-link" href="#"><i class="fa fa-instagram"></i></a>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section section-lg bg-default">
+      <div class="container">
+        <div class="row row-50 justify-content-center">
+          <div class="col-12 text-center">
+            <div class="section-name wow fadeInRight" data-wow-delay=".2s">Featured Products</div>
+            <h3 class="wow fadeInLeft text-capitalize" data-wow-delay=".3s">
+              Discover Our <span class="text-primary">Premium Solutions</span>
+            </h3>
+            <p class="offset-top-20">Click on any product to learn more about its features and specifications</p>
+          </div>
+        </div>
+
+        <div class="row row-50 justify-content-center offset-top-50">
+          <!-- Product 1 -->
+          <div class="col-lg-5 col-md-6 wow fadeInLeft" data-wow-delay=".3s">
+            <div class="product-card" onclick="window.location.href='product1.html'">
+              <img src="images/p1.jpeg" alt="Industrial Motor" class="product-image">
+              <div class="product-overlay">
+                <div class="product-title">Industrial Motor</div>
+                <div class="product-description">High-performance axial motor designed for industrial applications with
+                  superior efficiency and reliability.</div>
               </div>
             </div>
           </div>
-        </div>
-      </footer>
-    </div>
 
-    <div class="snackbars" id="form-output-global"></div>
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+          <!-- Product 2 -->
+          <div class="col-lg-5 col-md-6 wow fadeInRight" data-wow-delay=".4s">
+            <div class="product-card" onclick="window.location.href='product2.html'">
+              <img src="images/p2.jpeg" alt="Biodigester System" class="product-image">
+              <div class="product-overlay">
+                <div class="product-title">Biodigester System</div>
+                <div class="product-description">Eco-friendly waste management solution that converts organic waste into
+                  clean energy and fertilizer.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="section footer-classic context-dark bg-image" style="background: #2d3246;">
+      <div class="container">
+        <div class="row row-30">
+          <div class="col-lg-4 col-xl-5">
+            <div class="pr-xl-4">
+              <a class="brand" href="index.html"><img class="brand-logo-light" src="images/logo-inverse-200x34.png"
+                  alt="" width="100" height="17" /></a>
+              <p>Khayzen provides innovative engineering solutions for industrial and environmental challenges. Our
+                products are designed with cutting-edge technology to deliver superior performance and sustainability.
+              </p>
+              <p class="rights"><span>&copy;&nbsp;</span><span
+                  class="copyright-year">2024</span><span>&nbsp;</span><span>Khayzen</span><span>.&nbsp;</span><span>All
+                  Rights Reserved.</span></p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h5>Contacts</h5>
+            <dl class="contact-list">
+              <dt>Address:</dt>
+              <dd>Coimbatore, Tamil Nadu, India</dd>
+            </dl>
+            <dl class="contact-list">
+              <dt>email:</dt>
+              <dd><a href="mailto:#">Khayzen@gmail.com</a></dd>
+            </dl>
+            <dl class="contact-list">
+              <dt>phones:</dt>
+              <dd><a href="tel:#">+91 7217471790</a></dd>
+            </dl>
+          </div>
+          <div class="col-lg-4 col-xl-3">
+            <h5>Links</h5>
+            <ul class="nav-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="contacts.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row no-gutters social-container">
+        <div class="col">
+          <div class="social-inner">
+            <div class="social-links">
+              <a class="social-link" href="#"><i class="fa fa-facebook"></i></a>
+              <a class="social-link" href="#"><i class="fa fa-twitter"></i></a>
+              <a class="social-link" href="#"><i class="fa fa-google-plus"></i></a>
+              <a class="social-link" href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="snackbars" id="form-output-global"></div>
+  <script src="js/core.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/mobile-nav.js"></script>
+</body>
+
 </html>
