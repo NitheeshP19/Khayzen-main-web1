@@ -10,16 +10,120 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
+      <style>
+      /* IE warning panel styles (for older browsers) */
       .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
       html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
       
-      #products-menu .rd-dropdown-link { font-size: 18px !important; color: #333 !important; font-family: 'Poppins', sans-serif !important; font-weight: 400 !important; }
-      #tech-menu .rd-dropdown-link { font-size: 18px !important; color: #333 !important; font-family: 'Poppins', sans-serif !important; font-weight: 400 !important; }
+      /* Fixed text sizing for all devices (ensuring consistency) */
+      body { font-size: 20px !important; }
+      p { font-size: 16px !important; line-height: 1.7 !important; }
+      h1 { font-size: 3rem !important; }
+      h2 { font-size: 2.5rem !important; }
+      h3 { font-size: 2rem !important; }
+      h4 { font-size: 1.75rem !important; }
+      h5 { font-size: 1.5rem !important; }
+      h6 { font-size: 1.25rem !important; }
+      .section-name { font-size: 18px !important; }
+      .decorated-subtitle { font-size: 22px !important; }
+      .box-default-title { font-size: 20px !important; }
+      .box-default-description { font-size: 16px !important; }
+      .counter-classic-title { font-size: 16px !important; }
+      .item-subsection-title { font-size: 18px !important; }
+      .footer-classic-title { font-size: 18px !important; }
+      .footer-classic-description { font-size: 15px !important; }
+      .button { font-size: 15px !important; padding: 10px 20px !important; }
+      .rd-dropdown-link { font-size: 16px !important; }
+      
+      /* Styling for the navigation dropdown menus (Products and Technology) */
+      #products-menu .rd-dropdown-link { font-size: 16px !important; color: #333 !important; font-family: 'Poppins', sans-serif !important; font-weight: 400 !important; }
+      #tech-menu .rd-dropdown-link { font-size: 16px !important; color: #333 !important; font-family: 'Poppins', sans-serif !important; font-weight: 400 !important; }
+      #products-menu { border-radius: 15px !important; background: white !important; box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; overflow: hidden !important; }
+      #tech-menu { border-radius: 15px !important; background: white !important; box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important; overflow: hidden !important; }
+      
+      /* Global layout setup to ensure proper box model and overflow handling */
+      * { box-sizing: border-box !important; }
+      html { overflow-x: hidden !important; }
+      body { overflow-x: hidden !important; min-width: 320px !important; }
+      img { max-width: 100% !important; height: auto !important; }
+      .container { width: 100% !important; max-width: 1200px !important; margin: 0 auto !important; padding: 0 15px !important; }
+      
+      .rd-navbar-aside {
+        min-height: auto !important;
+        overflow-x: hidden !important;
+      }
+      
+      .brand-aside span { font-size: 16px !important; font-weight: 700 !important; letter-spacing: 0.5px !important; }
+      
+      /* Responsive styles for the Top Bar and content on various screen sizes */
+      @media (max-width: 1199px) {
+        .rd-navbar-aside {
+          padding: 15px 20px !important;
+          gap: 12px !important;
+        }
+        /* ... other responsive overrides ... */
+      }
+      
+      @media (max-width: 991px) {
+        .rd-navbar-aside {
+          flex-direction: column !important; /* Stack elements vertically */
+          text-align: center !important;
+          padding: 12px 15px !important;
+        }
+        /* Targets the right-aligned container for center-justification on tablets */
+        .rd-navbar-aside > div:nth-child(2) {
+          flex-wrap: wrap !important;
+          justify-content: center !important;
+          gap: 8px !important;
+          width: 100% !important;
+          margin-top: 10px; 
+        }
+        .social-links {
+          order: 1 !important;
+          margin-top: 8px !important;
+        }
+      }
+      
+      @media (max-width: 767px) {
+        /* ... mobile specific sizing ... */
+      }
+      
+      /* Feature Cards Popup Modal Styles */
+      .feature-popup {
+        /* Fixed position modal overlay */
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.9);
+        backdrop-filter: blur(10px);
+        animation: fadeIn 0.4s ease;
+      }
+      .popup-content {
+        /* Content container for the modal */
+        position: relative;
+        background: #ffffff;
+        margin: 2% auto;
+        padding: 50px 45px;
+        width: 90%;
+        max-width: 1200px;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        animation: slideIn 0.5s ease;
+        border: 1px solid #e5e7eb;
+      }
+      /* ... detailed styling for popup contents, cards, icons, and animations ... */
+      
     </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    
     <div class="preloader">
       <div class="preloader-body">
         <div class="cssload-container">
@@ -27,28 +131,59 @@
         </div>
         <p>Loading...</p>
       </div>
-    </div>
+    </div> 
+    
     <div class="page">
       <header class="section page-header">
         <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-stick-up="true">
             <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-            <div class="rd-navbar-main-outer" style="background-color: #666;">
-              <div class="rd-navbar-main">
-                <div class="rd-navbar-panel">
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!-- <div class="rd-navbar-brand">
-                    <a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/><img class="brand-logo-light" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/></a>
-                  </div> -->
-                </div>
+            
+            <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark" style="width: 100vw;">
+              <div class="rd-navbar-aside" style="display: flex; align-items: center; justify-content: space-between; padding: 18px 30px; width: 100vw; margin: 0; flex-wrap: wrap; gap: 15px; flex-grow: 1;">
                 
+                <div style="flex-shrink: 0; display: flex; align-items: center;">
+                  <a class="brand-aside" href="index.html" style="display: flex; align-items: center; gap: 12px;font-size:25px;"><img src="images/favicon.ico" alt="Khayzen Systems" style="width: 75px; height: 75px;font-size:25px !important;"/><span style="color: #007bff; font-weight: 800; font-size: clamp(25px, 5vw, 38px); letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,123,255,0.3); white-space: nowrap;font-size:25px !important;">KHAYZEN SYSTEMS PVT LTD</span></a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 1;">
+                  
+                  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius:15px; border: 1px solid #38bdf8;">
+                    <span class="fa fa-phone" style="color: #ffffff; font-size: 14px;"></span>
+                    <a href="tel:+917217471790" style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 10px;">+91 7217471790</a>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 15px; border: 1px solid #38bdf8;">
+                    <span class="fa fa-envelope" style="color: #ffffff; font-size: 14px;"></span>
+                    <a href="mailto:Khayzen@gmail.com" style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 10px;">Khayzen@gmail.com</a>
+                  </div>
+                  <div style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 15px; border: 1px solid #38bdf8;">
+                    <span class="fa fa-map-marker" style="color: #ffffff; font-size: 14px;"></span>
+                    <span style="color: #ffffff; font-weight: 600; font-size: 10px;">Coimbatore, Tamil Nadu</span>
+                  </div>
+
+                  <ul class="social-links" style="display: flex; gap: 10px; margin: 0; align-items: center; padding: 0; list-style: none;">
+                    <li><a class="fa fa-linkedin" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                    <li><a class="fa fa-twitter" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                    <li><a class="fa fa-facebook" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                    <li><a class="fa fa-instagram" href="#" style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;" onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="rd-navbar-main-outer" style="background-color: #6c757d;">
+              <div class="rd-navbar-main" style="background-color: #6c757d;">
+                <div class="rd-navbar-panel" style="background-color: #6c757d;">
+                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                  <div class="rd-navbar-brand" style="visibility: hidden;">
+                  </div>
+                </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
                     <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item"><a class="rd-nav-link" href="index.html" style="font-size: 20px;">Home</a></li>
-                      <li class="rd-nav-item active"><a class="rd-nav-link" href="aboutus.html" style="font-size: 20px;">About</a></li>
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html" style="font-size: 20px;">Home</a></li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="aboutus.html" style="font-size: 20px;">About</a></li>
                       <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
-                        <button class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="products-menu" style="font-size: 20px;">Products</button>
+                        <button  style="color: #00ddff !important;font-size: 20px;border:2px solid #333;"  class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="products-menu" style="font-size: 20px;">Products</button>
                         <ul id="products-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
                           <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="typography.html#axial">Axial Motor</a></li>
                           <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="typography.html#biodigester">Biodigester</a></li>
@@ -56,7 +191,7 @@
                         </ul>
                       </li>
                       <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
-                        <button class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu" style="font-size: 20px;">Technology</button>
+                        <button style="color: #03ddff !important;font-size: 20px;border:2px solid #333; " class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu" style="font-size: 20px;">Technology</button>
                         <ul id="tech-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
                           <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="technology.html#advantages">Advantages</a></li>
                           <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link" href="technology.html#applications">Applications</a></li>
