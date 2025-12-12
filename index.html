@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     
-         <style>
+    <style>
       /* IE warning panel styles (for older browsers) */
       .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
       html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
@@ -209,123 +209,6 @@
           </nav>
         </div>
       </header>
-<!-- Mobile drawer (hidden by default) -->
-<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
-  <div class="mobile-backdrop" id="mobileBackdrop" tabindex="-1"></div>
-
-  <aside class="mobile-panel" role="dialog" aria-modal="true" aria-label="Site menu">
-    <div class="mobile-brand">
-      <img src="images/favicon.ico" alt="logo" style="width:56px;height:56px;object-fit:cover;">
-      <div>
-        <div style="font-weight:800; font-size:18px; color:#07a;">KHAYZEN SYSTEMS</div>
-        <div style="font-size:13px; color:#666;">Engineering & Solutions</div>
-      </div>
-    </div>
-
-    <nav role="navigation" aria-label="Mobile main">
-      <ul class="mobile-list" id="mobileList">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="aboutus.html">About</a></li>
-
-        <li class="mobile-item">
-          <button class="mobile-toggle" data-target="productsSub">Products ▾</button>
-          <ul class="mobile-submenu" id="productsSub">
-            <li><a href="typography.html#axial">Axial Motor</a></li>
-            <li><a href="typography.html#biodigester">Biodigester</a></li>
-            <li><a href="typography.html#patient">Patient Shifter</a></li>
-          </ul>
-        </li>
-
-        <li class="mobile-item">
-          <button class="mobile-toggle" data-target="techSub">Technology ▾</button>
-          <ul class="mobile-submenu" id="techSub">
-            <li><a href="technology.html#advantages">Advantages</a></li>
-            <li><a href="technology.html#applications">Applications</a></li>
-            <li><a href="technology.html#technology">Technology</a></li>
-          </ul>
-        </li>
-
-        <li><a href="contacts.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div style="margin-top:18px;">
-      <a class="pill" href="tel:+917217471790" style="display:inline-block;margin-bottom:8px;"><span class="fa fa-phone"></span> Call +91 7217471790</a>
-      <a class="pill" href="mailto:Khayzen@gmail.com" style="display:inline-block;">Email Us</a>
-    </div>
-  </aside>
-</div>
-
-<script>
-(function(){
-  const navToggle = document.getElementById('navToggle');
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const backdrop = document.getElementById('mobileBackdrop');
-
-  function openDrawer() {
-    mobileDrawer.classList.add('open');
-    mobileDrawer.setAttribute('aria-hidden', 'false');
-    navToggle.setAttribute('aria-expanded', 'true');
-    // prevent background scroll
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-    // trap focus - simple approach: focus first link
-    const firstControl = mobileDrawer.querySelector('button, a');
-    if(firstControl) firstControl.focus();
-  }
-  function closeDrawer() {
-    mobileDrawer.classList.remove('open');
-    mobileDrawer.setAttribute('aria-hidden', 'true');
-    navToggle.setAttribute('aria-expanded', 'false');
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
-    navToggle.focus();
-  }
-
-  navToggle.addEventListener('click', function(e){
-    if(mobileDrawer.classList.contains('open')) closeDrawer();
-    else openDrawer();
-  });
-
-  backdrop.addEventListener('click', closeDrawer);
-  // close on ESC
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && mobileDrawer.classList.contains('open')) closeDrawer();
-  });
-
-  // mobile submenu toggles
-  document.querySelectorAll('.mobile-toggle').forEach(btn => {
-    btn.addEventListener('click', function () {
-      const id = this.dataset.target;
-      const submenu = document.getElementById(id);
-      const parent = this.parentElement;
-      parent.classList.toggle('mobile-item-open');
-      const expanded = parent.classList.contains('mobile-item-open');
-      this.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    });
-  });
-
-  // Desktop accessible dropdown toggles (for keyboard users)
-  document.querySelectorAll('.dropdown > .nav-button').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      const menu = this.nextElementSibling;
-      const isOpen = menu.style.display === 'block';
-      // close all dropdowns first
-      document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
-      if(!isOpen) menu.style.display = 'block';
-      else menu.style.display = 'none';
-    });
-  });
-
-  // Close desktop dropdowns when clicking outside
-  document.addEventListener('click', function(e){
-    if(!e.target.closest('.dropdown')) {
-      document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
-    }
-  });
-
-})();
-</script>
       
       <section class="section main-section parallax-scene-js" style="background:url('images/bg-1-1700x803.png') no-repeat center center; background-size:cover;">
         <div class="container">
@@ -390,7 +273,148 @@ From advanced product design and precision manufacturing to custom industrial so
         <div class="decor-text decor-text-1">ABOUT</div>
       </section>
       
-      
+      <div id="feature-popup" class="feature-popup">
+        <div class="popup-content">
+          <button class="close-popup" onclick="hideFeatures()">&times;</button>
+          <h2 class="popup-title">⚡ Advanced Motor Technology Features ⚡</h2>
+          
+          <div class="features-section">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-compress"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>Smaller Footprint</h4>
+                    <p>Smaller footprint than existing motor technology</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-volume-down"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>Reduced Noise</h4>
+                    <p>Reduced noise due to elimination of winding structure</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-cogs"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>Simplified Manufacturing</h4>
+                    <p>Eliminates need for iron lamination and wire winding</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-check-circle"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>No Cogging</h4>
+                    <p>No steel in stator eliminates cogging (vibration)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-feather"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>Lightweight Design</h4>
+                    <p>Motors weigh 70% less and need 80% less raw materials</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-bolt"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>High Torque</h4>
+                    <p>Produces more torque with less than half the mass</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="feature-card">
+                  <div class="feature-icon">
+                    <i class="fa fa-leaf"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h4>Energy Efficient</h4>
+                    <p>Energy efficiency between 87% to 90%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6"></div>
+            </div>
+          </div>
+          
+          <div class="technical-overview">
+            <h3 class="technical-title">Technical Overview</h3>
+            <p class="technical-text">This motor is a **brushless, permanent magnet synchronous motor** with a multi-layered **printed circuit board** embedded with copper-etched conductors in a stator, that works in conjunction with permanent magnets in the rotor with **Axial Flux and Air gap**.</p>
+            <p class="technical-text">The state-of-the-art motor technology is patented. **High-tech edge computing** makes use of printed circuit board manufacturing to print stators for **coreless axial flux machines**. This approach fundamentally changes how motors are designed and manufactured.</p>
+          </div>
+          
+          <div class="comparison-section">
+            <h3 class="comparison-title">⚖️ Comparison</h3>
+            <div class="comparison-grid">
+              <div class="comparison-card">
+                <h4>1.0 HP Axial Flux Monoblock Pump</h4>
+                <img src="images/axial motor.jpg" alt="Axial Flux Pump" class="comparison-img">
+                <table class="comparison-table">
+                  <thead>
+                    <tr>
+                      <th>HEAD (M)</th>
+                      <th>Amps</th>
+                      <th>LPM</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>15</td><td>2.85</td><td>150</td></tr>
+                    <tr><td>18</td><td>2.40</td><td>140</td></tr>
+                    <tr><td>24</td><td>2.10</td><td>108</td></tr>
+                    <tr><td>30</td><td>1.70</td><td>100</td></tr>
+                    <tr><td>50</td><td>1.68</td><td>–</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="comparison-card">
+                <h4>1.0 HP Conventional Monoblock Pump</h4>
+                <img src="images/comparison.jpg" alt="Conventional Pump" class="comparison-img">
+                <table class="comparison-table">
+                  <thead>
+                    <tr>
+                      <th>HEAD (M)</th>
+                      <th>Amps</th>
+                      <th>LPM</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>6</td><td>7.95</td><td>160</td></tr>
+                    <tr><td>12</td><td>7.80</td><td>141</td></tr>
+                    <tr><td>18</td><td>7.00</td><td>117</td></tr>
+                    <tr><td>24</td><td>6.25</td><td>73</td></tr>
+                    <tr><td>30</td><td>5.60</td><td>–</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="comparison-footer">© 2025 Khayzen. All rights reserved.</div>
+          </div>
+        </div>
+      </div>
       
       <section class="section custom-section position-relative section-md">
         <div class="container">
@@ -496,7 +520,7 @@ From advanced product design and precision manufacturing to custom industrial so
                     <div class="item-subsection"><span class="item-subsection-title devider-left">Heather Perry</span><span>Regular Client</span></div>
                   </div>
                 </div>
-              </div> <!-- /.owl-carousel -->
+                </div>
             </div>
           </div>
         </div>
@@ -559,13 +583,6 @@ From advanced product design and precision manufacturing to custom industrial so
       </footer>
     </div>
     <div class="snackbars" id="form-output-global"></div>
-
-    <!-- Feature popup (empty content as requested) -->
-    <div id="feature-popup" class="feature-popup" aria-hidden="true" role="dialog">
-      <div class="popup-content" role="document" tabindex="-1">
-        <!-- Intentionally left empty (user requested no content) -->
-      </div>
-    </div>
     
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
@@ -578,81 +595,81 @@ From advanced product design and precision manufacturing to custom industrial so
           var menuId = btn.getAttribute('aria-controls');
           var menu = document.getElementById(menuId);
           if(!menu) return;
+        // ... navigation JS logic (toggle, keyboard, close on click outside) ...
+        function isOpen(){ return btn.getAttribute('aria-expanded') === 'true'; }
 
-          function isOpen(){ return btn.getAttribute('aria-expanded') === 'true'; }
+        function openMenu(){
+          btn.setAttribute('aria-expanded','true');
+          menu.setAttribute('aria-hidden','false');
+          menu.classList.add('open');
+          menu.style.display = 'block';
+        }
 
-          function openMenu(){
-            btn.setAttribute('aria-expanded','true');
-            menu.setAttribute('aria-hidden','false');
-            menu.classList.add('open');
-            menu.style.display = 'block';
-          }
+        function closeMenu(){
+          btn.setAttribute('aria-expanded','false');
+          menu.setAttribute('aria-hidden','true');
+          menu.classList.remove('open');
+          menu.style.display = '';
+        }
 
-          function closeMenu(){
-            btn.setAttribute('aria-expanded','false');
-            menu.setAttribute('aria-hidden','true');
-            menu.classList.remove('open');
-            menu.style.display = '';
-          }
+        function toggleMenu(){ isOpen() ? closeMenu() : openMenu(); }
 
-          function toggleMenu(){ isOpen() ? closeMenu() : openMenu(); }
+        // Event listeners for menu toggling and accessibility
+        btn.addEventListener('click', function(e){
+          e.stopPropagation();
+          toggleMenu();
+        });
 
-          // Event listeners for menu toggling and accessibility
-          btn.addEventListener('click', function(e){
-            e.stopPropagation();
-            toggleMenu();
-          });
-
-          btn.addEventListener('pointerdown', function(e){
-            try{
-              if(e.pointerType === 'touch'){
-                if(!isOpen()){
-                  e.preventDefault();
-                  e.stopPropagation();
-                  openMenu();
-                }
+        btn.addEventListener('pointerdown', function(e){
+          try{
+            if(e.pointerType === 'touch'){
+              if(!isOpen()){
+                e.preventDefault();
+                e.stopPropagation();
+                openMenu();
               }
-            }catch(err){ /* ignore if pointerType not supported */ }
-          });
-
-          // Keyboard support for accessibility (Arrow keys, Enter, Escape)
-          btn.addEventListener('keydown', function(e){
-            if(e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' '){
-              e.preventDefault();
-              openMenu();
-              var first = menu.querySelector('[role="menuitem"]');
-              if(first) first.focus();
-            } else if(e.key === 'Escape'){
-              closeMenu();
-              btn.focus();
             }
-          });
+          }catch(err){ /* ignore if pointerType not supported */ }
+        });
 
-          // Keyboard navigation inside menu
-          menu.addEventListener('keydown', function(e){
-            var items = Array.prototype.slice.call(menu.querySelectorAll('[role="menuitem"]'));
-            if(!items.length) return;
-            var idx = items.indexOf(document.activeElement);
-            if(e.key === 'ArrowDown'){
-              e.preventDefault();
-              items[(idx + 1) % items.length].focus();
-            } else if(e.key === 'ArrowUp'){
-              e.preventDefault();
-              items[(idx - 1 + items.length) % items.length].focus();
-            } else if(e.key === 'Escape'){
-              closeMenu();
-              btn.focus();
-            }
-          });
+        // Keyboard support for accessibility (Arrow keys, Enter, Escape)
+        btn.addEventListener('keydown', function(e){
+          if(e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' '){
+            e.preventDefault();
+            openMenu();
+            var first = menu.querySelector('[role="menuitem"]');
+            if(first) first.focus();
+          } else if(e.key === 'Escape'){
+            closeMenu();
+            btn.focus();
+          }
+        });
 
-          // Close when clicking/tapping outside
-          document.addEventListener('click', function(e){
-            if(!btn.contains(e.target) && !menu.contains(e.target)) closeMenu();
-          });
+        // Keyboard navigation inside menu
+        menu.addEventListener('keydown', function(e){
+          var items = Array.prototype.slice.call(menu.querySelectorAll('[role="menuitem"]'));
+          if(!items.length) return;
+          var idx = items.indexOf(document.activeElement);
+          if(e.key === 'ArrowDown'){
+            e.preventDefault();
+            items[(idx + 1) % items.length].focus();
+          } else if(e.key === 'ArrowUp'){
+            e.preventDefault();
+            items[(idx - 1 + items.length) % items.length].focus();
+          } else if(e.key === 'Escape'){
+            closeMenu();
+            btn.focus();
+          }
+        });
 
-          // Close on viewport changes
-          window.addEventListener('resize', closeMenu);
-          window.addEventListener('orientationchange', closeMenu);
+        // Close when clicking/tapping outside
+        document.addEventListener('click', function(e){
+          if(!btn.contains(e.target) && !menu.contains(e.target)) closeMenu();
+        });
+
+        // Close on viewport changes
+        window.addEventListener('resize', closeMenu);
+        window.addEventListener('orientationchange', closeMenu);
         });
       })();
 
@@ -686,13 +703,13 @@ From advanced product design and precision manufacturing to custom industrial so
         entries.forEach(entry => {
           if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
             entry.target.classList.add('animated');
-            const counterEl = entry.target.querySelector('.counter');
-            const target = parseInt(counterEl.getAttribute('data-target'), 10);
+            const counter = entry.target.querySelector('.counter');
+            const target = parseInt(counter.getAttribute('data-target'));
             
             if (!isNaN(target)) {
-              counterEl.textContent = '0'; 
+              counter.textContent = '0'; 
               setTimeout(() => {
-                animateCounter(counterEl, target);
+                animateCounter(counter, target);
               }, 200);
             }
           }
@@ -702,49 +719,39 @@ From advanced product design and precision manufacturing to custom industrial so
       // Initialization logic for counters on DOM load
       document.addEventListener('DOMContentLoaded', function() {
         const counters = document.querySelectorAll('.counter-classic');
-        counters.forEach((counterWrapper) => {
-          const counterElement = counterWrapper.querySelector('.counter');
-          if (counterElement && !counterElement.getAttribute('data-target')) {
+        counters.forEach((counter) => {
+          const counterElement = counter.querySelector('.counter');
+          if (counterElement && !counterElement.hasAttribute('data-target')) {
               const currentText = counterElement.textContent.replace('+', '').trim();
-              // if currentText is numeric use that, otherwise leave as-is
-              if (!isNaN(parseInt(currentText, 10))) {
-                counterElement.setAttribute('data-target', currentText);
-              }
+              counterElement.setAttribute('data-target', currentText);
           }
-          counterObserver.observe(counterWrapper);
+          counterObserver.observe(counter);
         });
       });
       
-      // Feature popup functions (show/hide modal) - guarded against missing element
+      // Feature popup functions (show/hide modal)
       function showFeatures() {
-        var popup = document.getElementById('feature-popup');
-        if (!popup) return;
-        popup.style.display = 'block';
-        popup.setAttribute('aria-hidden', 'false');
+        document.getElementById('feature-popup').style.display = 'block';
         document.body.style.overflow = 'hidden'; // Prevents background scroll
       }
       
       function hideFeatures() {
-        var popup = document.getElementById('feature-popup');
-        if (!popup) return;
-        popup.style.display = 'none';
-        popup.setAttribute('aria-hidden', 'true');
+        document.getElementById('feature-popup').style.display = 'none';
         document.body.style.overflow = 'auto'; // Restores background scroll
       }
       
       // Close popup when clicking outside the content
-      window.addEventListener('click', function(event) {
-        var popup = document.getElementById('feature-popup');
-        if (!popup) return;
+      window.onclick = function(event) {
+        const popup = document.getElementById('feature-popup');
         if (event.target === popup) {
           hideFeatures();
         }
-      });
-
+      }
+      
       // Close popup with Escape key
       document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
-          var popup = document.getElementById('feature-popup');
+          const popup = document.getElementById('feature-popup');
           if (popup && popup.style.display === 'block') {
             hideFeatures();
           }
