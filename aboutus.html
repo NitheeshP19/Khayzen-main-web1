@@ -246,6 +246,91 @@
       border: 1px solid #e5e7eb;
     }
 
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .animated-gradient-bg {
+      background: linear-gradient(-45deg, #007bff, #0056b3, #00d4ff, #0056b3) !important;
+      background-size: 400% 400% !important;
+      animation: gradientBG 15s ease infinite !important;
+    }
+
+    /* Team Card Enhancements */
+    .team-card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid transparent;
+      height: 100%;
+    }
+
+    .team-card:hover {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 123, 255, 0.2);
+      border-color: rgba(0, 123, 255, 0.1);
+    }
+
+    .team-card-img-wrapper {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 25px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #007bff;
+      box-shadow: 0 8px 25px rgba(0, 123, 255, 0.3);
+      transition: all 0.5s ease;
+    }
+
+    .team-card:hover .team-card-img-wrapper {
+      border-color: #00d4ff;
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+      transform: rotate(5deg);
+    }
+
+    /* Value Item Enhancements */
+    .value-item {
+      text-align: center;
+      padding: 30px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .value-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .value-icon-wrapper {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+    }
+
+    .value-item:hover .value-icon-wrapper {
+      transform: scale(1.2) rotate(360deg);
+      background: linear-gradient(135deg, #00d4ff, #007bff);
+      box-shadow: 0 15px 30px rgba(0, 212, 255, 0.5);
+    }
+
     /* ... detailed styling for popup contents, cards, icons, and animations ... */
   </style>
 </head>
@@ -307,25 +392,7 @@
                   <span style="color: #ffffff; font-weight: 600; font-size: 10px;">Coimbatore, Tamil Nadu</span>
                 </div>
 
-                <ul class="social-links"
-                  style="display: flex; gap: 10px; margin: 0; align-items: center; padding: 0; list-style: none;">
-                  <li><a class="fa fa-linkedin" href="#"
-                      style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;"
-                      onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'"
-                      onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
-                  <li><a class="fa fa-twitter" href="#"
-                      style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;"
-                      onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'"
-                      onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
-                  <li><a class="fa fa-facebook" href="#"
-                      style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;"
-                      onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'"
-                      onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
-                  <li><a class="fa fa-instagram" href="#"
-                      style="background: #0ea5e9; color: white; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 16px; transition: all 0.3s ease; border: 1px solid #38bdf8;"
-                      onmouseover="this.style.background='#0284c7'; this.style.transform='translateY(-2px)'"
-                      onmouseout="this.style.background='#0ea5e9'; this.style.transform='translateY(0)'"></a></li>
-                </ul>
+
               </div>
             </div>
           </div>
@@ -349,7 +416,7 @@
                         style="font-size: 20px;">Products</button>
                       <ul id="products-menu" class="rd-navbar-dropdown" role="menu" aria-hidden="true">
                         <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
-                            href="typography.html#axial">Axial Motor</a></li>
+                            href="typography.html#axial">Axial Flux Motor</a></li>
                         <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
                             href="typography.html#biodigester">Biodigester</a></li>
                         <li class="rd-dropdown-item" role="none"><a role="menuitem" class="rd-dropdown-link"
@@ -381,8 +448,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section
-      style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); padding: 80px 0; text-align: center;">
+    <section class="animated-gradient-bg" style="padding: 80px 0; text-align: center;">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
@@ -496,12 +562,20 @@
             <h2 class="text-center mb-5 wow fadeInUp">Leadership Team</h2>
             <div class="row">
               <div class="col-lg-6 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".2s">
-                <div
-                  style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;"
-                  onmouseover="this.style.transform='translateY(-10px)'"
-                  onmouseout="this.style.transform='translateY(0)'">
-                  <div
-                    style="width: 180px; height: 180px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 5px solid #007bff; box-shadow: 0 8px 25px rgba(0,123,255,0.3);">
+                <div class="team-card">
+                  <div class="team-card-img-wrapper">
+                    <img src="images/p3.jpeg" alt="P.S.DEVARAJ" style="width: 100%; height: 100%; object-fit: cover;">
+                  </div>
+                  <h4 style="color: #007bff; margin-bottom: 12px; font-weight: 600; font-size: 1.4rem;">P.S.DEVARAJ</h4>
+                  <p style="color: #007bff; font-size: 1.2rem; margin-bottom: 18px; font-weight: 700;">Managing Director
+                  </p>
+                  <p style="color: #555; font-size: 1rem; line-height: 1.7;">Driving business growth and fostering
+                    partnerships to expand our global reach and market presence.</p>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".4s">
+                <div class="team-card">
+                  <div class="team-card-img-wrapper">
                     <img src="images/p1.jpeg" alt="S.RAJ SIDDHARTH"
                       style="width: 100%; height: 100%; object-fit: cover;">
                   </div>
@@ -513,13 +587,9 @@
                     innovation across all business operations with extensive industry expertise.</p>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".4s">
-                <div
-                  style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;"
-                  onmouseover="this.style.transform='translateY(-10px)'"
-                  onmouseout="this.style.transform='translateY(0)'">
-                  <div
-                    style="width: 180px; height: 180px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 5px solid #007bff; box-shadow: 0 8px 25px rgba(0,123,255,0.3);">
+              <div class="col-lg-6 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".6s">
+                <div class="team-card">
+                  <div class="team-card-img-wrapper">
                     <img src="images/p2.jpeg" alt="R.SURRENDERAN" style="width: 100%; height: 100%; object-fit: cover;">
                   </div>
                   <h4 style="color: #007bff; margin-bottom: 12px; font-weight: 600; font-size: 1.4rem;">R.SURRENDERAN
@@ -530,29 +600,9 @@
                     ensuring cutting-edge solutions meet the highest quality standards.</p>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".6s">
-                <div
-                  style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;"
-                  onmouseover="this.style.transform='translateY(-10px)'"
-                  onmouseout="this.style.transform='translateY(0)'">
-                  <div
-                    style="width: 180px; height: 180px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 5px solid #007bff; box-shadow: 0 8px 25px rgba(0,123,255,0.3);">
-                    <img src="images/p3.jpeg" alt="P.S.DEVARAJ" style="width: 100%; height: 100%; object-fit: cover;">
-                  </div>
-                  <h4 style="color: #007bff; margin-bottom: 12px; font-weight: 600; font-size: 1.4rem;">P.S.DEVARAJ</h4>
-                  <p style="color: #007bff; font-size: 1.2rem; margin-bottom: 18px; font-weight: 700;">Managing Director
-                  </p>
-                  <p style="color: #555; font-size: 1rem; line-height: 1.7;">Driving business growth and fostering
-                    partnerships to expand our global reach and market presence.</p>
-                </div>
-              </div>
               <div class="col-lg-6 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".8s">
-                <div
-                  style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;"
-                  onmouseover="this.style.transform='translateY(-10px)'"
-                  onmouseout="this.style.transform='translateY(0)'">
-                  <div
-                    style="width: 180px; height: 180px; margin: 0 auto 25px; border-radius: 50%; overflow: hidden; border: 5px solid #007bff; box-shadow: 0 8px 25px rgba(0,123,255,0.3);">
+                <div class="team-card">
+                  <div class="team-card-img-wrapper">
                     <img src="images/p4.jpeg" alt="SENTHIL RAJ" style="width: 100%; height: 100%; object-fit: cover;">
                   </div>
                   <h4 style="color: #007bff; margin-bottom: 12px; font-weight: 600; font-size: 1.4rem;">SENTHIL RAJ</h4>
@@ -576,10 +626,8 @@
             <h2 class="text-center mb-5 wow fadeInUp">Our Values</h2>
             <div class="row">
               <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".2s">
-                <div style="text-align: center; padding: 30px 20px;">
-                  <div
-                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; transition: transform 0.3s ease;"
-                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <div class="value-item">
+                  <div class="value-icon-wrapper">
                     <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
                       <path d="M12 2L13.09 8.26L20 9L13.09 9.74L12 16L10.91 9.74L4 9L10.91 8.26L12 2Z" />
                     </svg>
@@ -590,10 +638,8 @@
                 </div>
               </div>
               <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".4s">
-                <div style="text-align: center; padding: 30px 20px;">
-                  <div
-                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; transition: transform 0.3s ease;"
-                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <div class="value-item">
+                  <div class="value-icon-wrapper">
                     <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
                       <path
                         d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.52 22 12 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" />
@@ -605,10 +651,8 @@
                 </div>
               </div>
               <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".6s">
-                <div style="text-align: center; padding: 30px 20px;">
-                  <div
-                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; transition: transform 0.3s ease;"
-                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <div class="value-item">
+                  <div class="value-icon-wrapper">
                     <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
                       <path
                         d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7.5 15 8.5 14.5 11.5 14.5C14.5 14.5 16.5 16.5 16.5 16.5C18.5 14.5 18.5 11.5 17 8Z" />
@@ -620,10 +664,8 @@
                 </div>
               </div>
               <div class="col-lg-3 col-md-6 mb-4 wow fadeInUp" data-wow-delay=".8s">
-                <div style="text-align: center; padding: 30px 20px;">
-                  <div
-                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #007bff, #0056b3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; transition: transform 0.3s ease;"
-                    onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <div class="value-item">
+                  <div class="value-icon-wrapper">
                     <svg width="32" height="32" fill="white" viewBox="0 0 24 24">
                       <path
                         d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM21 9V7L15 1L13.5 2.5L16.17 5.17L10.5 10.84C10.18 10.31 9.61 10 9 10H5C3.9 10 3 10.9 3 12V22H5V12H9L12 15V22H14V14.5L11.5 12L15.5 8L18 10.5V9H21Z" />
@@ -696,12 +738,7 @@
           <p class="rights" style="color: white !important; opacity: 0.8 !important;"><span>&copy;&nbsp;</span><span
               class="copyright-year"></span>. All Rights Reserved. Khayzen
             Systems</p>
-          <ul class="social-links">
-            <li><a class="fa fa-linkedin" href="#"></a></li>
-            <li><a class="fa fa-twitter" href="#"></a></li>
-            <li><a class="fa fa-facebook" href="#"></a></li>
-            <li><a class="fa fa-instagram" href="#"></a></li>
-          </ul>
+
         </div>
       </div>
     </footer>

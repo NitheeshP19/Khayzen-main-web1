@@ -139,6 +139,34 @@ try {
     $mail->MsgHTML($template);
     $mail->send();
 
+    // Log to CSV Database
+    try {
+        $logFile = 'submissions.csv';
+        $isNewFile = !file_exists($logFile);
+        $file = fopen($logFile, 'a');
+        
+        // Add headers if new file
+        if ($isNewFile) {
+            fputcsv($file, array('Date', 'Form Type', 'Name', 'Email', 'Phone', 'Message', 'IP'));
+        }
+        
+        // Prepare data row
+        $row = array(
+            date('Y-m-d H:i:s'),
+            isset($_POST['form-type']) ? $_POST['form-type'] : 'unknown',
+            isset($_POST['name']) ? $_POST['name'] : 'N/A',
+            isset($_POST['email']) ? $_POST['email'] : 'N/A',
+            isset($_POST['phone']) ? $_POST['phone'] : 'N/A',
+            isset($_POST['message']) ? $_POST['message'] : 'N/A',
+            getRemoteIPAddress()
+        );
+        
+        fputcsv($file, $row);
+        fclose($file);
+    } catch (Exception $e) {
+        // Silently fail logging if it fails to avoid breaking email delivery
+    }
+
     die('MF000');
 } catch (phpmailerException $e) {
     die('MF254');
