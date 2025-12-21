@@ -3,6 +3,8 @@
 $formConfigFile = file_get_contents("rd-mailform.config.json");
 $formConfig = json_decode($formConfigFile, true);
 
+require_once 'db_config.php';
+
 date_default_timezone_set('Etc/UTC');
 
 try {
@@ -163,6 +165,36 @@ try {
         
         fputcsv($file, $row);
         fclose($file);
+
+        // Logging to MySQL Database
+        try {
+            $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4";
+            $options = [
+                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                PDO::ATTR_EMULATE_PREPARES   => false,
+            ];
+            
+            $pdo = new PDO($dsn, DB_USER, DB_PASS, $options);
+            
+            $sql = "INSERT INTO submissions (form_type, name, email, phone, message, ip_address) 
+                    VALUES (?, ?, ?, ?, ?, ?)";
+            
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([
+                isset($_POST['form-type']) ? $_POST['form-type'] : 'unknown',
+                isset($_POST['name']) ? $_POST['name'] : 'N/A',
+                isset($_POST['email']) ? $_POST['email'] : 'N/A',
+                isset($_POST['phone']) ? $_POST['phone'] : 'N/A',
+                isset($_POST['message']) ? $_POST['message'] : 'N/A',
+                getRemoteIPAddress()
+            ]);
+            
+        } catch (PDOException $e) {
+            // Silently fail database logging to avoid breaking email delivery if DB is not set up yet
+            error_log("Database Error: " . $e->getMessage());
+        }
+
     } catch (Exception $e) {
         // Silently fail logging if it fails to avoid breaking email delivery
     }

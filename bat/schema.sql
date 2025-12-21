@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS `submissions` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `form_type` VARCHAR(50) DEFAULT 'unknown',
+  `name` VARCHAR(255) DEFAULT 'N/A',
+  `email` VARCHAR(255) DEFAULT 'N/A',
+  `phone` VARCHAR(50) DEFAULT 'N/A',
+  `message` TEXT,
+  `ip_address` VARCHAR(45) DEFAULT 'N/A',
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
