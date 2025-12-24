@@ -46,20 +46,77 @@
     /* Hero Section Style for this page */
     .hero-section {
       background: linear-gradient(135deg, #0056b3, #007bff);
-      padding: 100px 0;
-      text-align: center;
+      padding: 250px 0 100px 0;
+      text-align: center !important;
       color: white;
     }
 
     .hero-section h1 {
       font-size: 3rem;
-      font-weight: 700;
+      font-weight: 700 !important;
       margin-bottom: 10px;
+      text-align: center !important;
+      color: white !important;
     }
 
     .hero-section p {
       font-size: 1.25rem;
       opacity: 0.8;
+      font-weight: bold !important;
+      text-align: center !important;
+      color: white !important;
+    }
+
+    /* Ensure Nav Links are visible on dark background (Desktop) */
+    .rd-navbar-static .rd-nav-link {
+      color: white !important;
+    }
+
+    /* Ensure Nav Links are visible on light background (Mobile/Fixed and Sticky if white) */
+    .rd-navbar-fixed .rd-nav-link,
+    .rd-navbar-is-stuck .rd-nav-link {
+      color: #333 !important;
+    }
+
+    /* Added from index.html for navigation consistency */
+    .rd-navbar-aside {
+      min-height: auto !important;
+      overflow-x: hidden !important;
+    }
+
+
+    .brand-aside span {
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.5px !important;
+    }
+
+    @media (max-width: 1199px) {
+      .rd-navbar-aside {
+        padding: 15px 20px !important;
+        gap: 12px !important;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .rd-navbar-aside {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 12px 15px !important;
+      }
+
+      .rd-navbar-aside>div:nth-child(2) {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        margin-top: 10px;
+      }
+
+      .social-links {
+        order: 1 !important;
+        margin-top: 8px !important;
+      }
     }
   </style>
 </head>
@@ -88,13 +145,53 @@
           <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse">
             <span></span>
           </div>
+
+          <!-- Added Navbar Aside -->
+          <div class="rd-navbar-aside-outer rd-navbar-collapse bg-gray-dark" style="width: 100vw;">
+            <div class="rd-navbar-aside"
+              style="display: flex; align-items: center; justify-content: space-between; padding: 18px 30px; width: 100vw; margin: 0; flex-wrap: wrap; gap: 15px; flex-grow: 1;">
+
+              <div style="flex-shrink: 0; display: flex; align-items: center;">
+                <a class="brand-aside" href="index.html"
+                  style="display: flex; align-items: center; gap: 12px;font-size:25px;"><img src="images/favicon.ico"
+                    alt="Khayzen Systems" style="width: 75px; height: 75px;font-size:25px !important;" /><span
+                    style="color: #007bff; font-weight: 800; font-size: clamp(25px, 5vw, 38px); letter-spacing: 1px; text-shadow: 0 2px 4px rgba(0,123,255,0.3); white-space: nowrap;font-size:25px !important;">KHAYZEN
+                    SYSTEMS PVT LTD</span></a>
+              </div>
+
+              <div
+                style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap; justify-content: flex-end; flex-shrink: 1;">
+
+                <div
+                  style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius:15px; border: 1px solid #38bdf8;">
+                  <span class="fa fa-phone" style="color: #ffffff; font-size: 14px;"></span>
+                  <a href="tel:+917217471790"
+                    style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 10px;">+91 7217471790</a>
+                </div>
+                <div
+                  style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 15px; border: 1px solid #38bdf8;">
+                  <span class="fa fa-envelope" style="color: #ffffff; font-size: 14px;"></span>
+                  <a href="mailto:Khayzen@gmail.com"
+                    style="color: #ffffff; font-weight: 600; text-decoration: none; font-size: 10px;">Khayzen@gmail.com</a>
+                </div>
+                <div
+                  style="display: flex; align-items: center; gap: 8px; padding: 8px 15px; background: #0ea5e9; border-radius: 15px; border: 1px solid #38bdf8;">
+                  <span class="fa fa-map-marker" style="color: #ffffff; font-size: 14px;"></span>
+                  <span style="color: #ffffff; font-weight: 600; font-size: 10px;">Coimbatore, Tamil Nadu</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="rd-navbar-main-outer" style="background-color: #6c757d;">
             <div class="rd-navbar-main" style="background-color: #6c757d;">
               <div class="rd-navbar-panel" style="background-color: #6c757d;">
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                <!-- <div class="rd-navbar-brand">
-                    <a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/><img class="brand-logo-light" src="images/logo-inverse-200x34.png" alt="" width="500" height="300"/></a>
-                  </div> -->
+                <div class="rd-navbar-brand" style="visibility: hidden;">
+                  <a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-inverse-200x34.png"
+                      alt="" width="200" height="34" /><img class="brand-logo-light"
+                      src="images/logo-inverse-200x34.png" alt="" width="200" height="34" /></a>
+                </div>
               </div>
               <div class="rd-navbar-main-element">
                 <div class="rd-navbar-nav-wrap">
@@ -116,7 +213,7 @@
                             href="typography.html#patient">Patient Shifter</a></li>
                       </ul>
                     </li>
-                    <li class="rd-nav-item rd-navbar-submenu" aria-haspopup="true">
+                    <li class="rd-nav-item rd-navbar-submenu active" aria-haspopup="true">
                       <button style="color: white !important;font-size: 20px;background-color:#0ea5e9 !important;"
                         class="rd-nav-link rd-nav-button" aria-expanded="false" aria-controls="tech-menu"
                         style="font-size: 20px;">Technology</button>
@@ -584,15 +681,15 @@
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-lg-10">
-                  <h2 class="text-center mb-5 wow fadeInDown" style="color: #007bff; font-weight: 700;">Technology Advantages</h2>
+                  <h2 class="text-center mb-5 wow fadeInDown" style="color: #007bff !important; font-weight: 800;">Technology Advantages</h2>
                   <div class="row">
                     <div class="col-md-6 mb-4 wow fadeInLeft" data-wow-delay="0.1s">
                       <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%; transition: all 0.3s ease; border-left: 4px solid #007bff;"
                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(0,123,255,0.15)'"
                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)'">
                         <div style="font-size: 2.5rem; margin-bottom: 15px;">⚡</div>
-                        <h4 style="color: #333; margin-bottom: 15px; font-weight: 600;">High Torque Density</h4>
-                        <p style="color: #555;">Our axial flux design packs more power into a smaller, lighter form factor than traditional radial motors, delivering exceptional performance-to-weight ratio.</p>
+                        <h4 style="color: #333; margin-bottom: 15px; font-weight: 700;">High Torque Density</h4>
+                        <p style="color: #555; font-weight: 600;">Our axial flux design packs more power into a smaller, lighter form factor than traditional radial motors, delivering exceptional performance-to-weight ratio.</p>
                       </div>
                     </div>
                     <div class="col-md-6 mb-4 wow fadeInRight" data-wow-delay="0.2s">
@@ -600,8 +697,8 @@
                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(40,167,69,0.15)'"
                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)'">
                         <div style="font-size: 2.5rem; margin-bottom: 15px;">🌐</div>
-                        <h4 style="color: #333; margin-bottom: 15px; font-weight: 600;">Exceptional Efficiency</h4>
-                        <p style="color: #555;">The use of PCB stators and permanent magnets minimizes energy loss, leading to superior efficiency for battery-powered and continuous applications.</p>
+                        <h4 style="color: #333; margin-bottom: 15px; font-weight: 700;">Exceptional Efficiency</h4>
+                        <p style="color: #555; font-weight: 600;">The use of PCB stators and permanent magnets minimizes energy loss, leading to superior efficiency for battery-powered and continuous applications.</p>
                       </div>
                     </div>
                     <div class="col-md-6 mb-4 wow fadeInLeft" data-wow-delay="0.3s">
@@ -609,8 +706,8 @@
                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(23,162,184,0.15)'"
                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)'">
                         <div style="font-size: 2.5rem; margin-bottom: 15px;">⚙️</div>
-                        <h4 style="color: #333; margin-bottom: 15px; font-weight: 600;">Zero Cogging</h4>
-                        <p style="color: #555;">Our unique PCB coil layout completely eliminates cogging torque, ensuring ultra-smooth and precise motion control even at low speeds.</p>
+                        <h4 style="color: #333; margin-bottom: 15px; font-weight: 700;">Zero Cogging</h4>
+                        <p style="color: #555; font-weight: 600;">Our unique PCB coil layout completely eliminates cogging torque, ensuring ultra-smooth and precise motion control even at low speeds.</p>
                       </div>
                     </div>
                     <div class="col-md-6 mb-4 wow fadeInRight" data-wow-delay="0.4s">
@@ -618,8 +715,8 @@
                            onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 30px rgba(255,193,7,0.15)'"
                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)'">
                         <div style="font-size: 2.5rem; margin-bottom: 15px;">📉</div>
-                        <h4 style="color: #333; margin-bottom: 15px; font-weight: 600;">Material Reduction</h4>
-                        <p style="color: #555;">The thin PCB stator reduces the need for heavy copper and steel, cutting down on raw material usage by up to 80% for a greener footprint.</p>
+                        <h4 style="color: #333; margin-bottom: 15px; font-weight: 700;">Material Reduction</h4>
+                        <p style="color: #555; font-weight: 600;">The thin PCB stator reduces the need for heavy copper and steel, cutting down on raw material usage by up to 80% for a greener footprint.</p>
                       </div>
                     </div>
                   </div>
